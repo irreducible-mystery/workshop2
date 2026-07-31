@@ -27,3 +27,12 @@ the record. Any participant may edit via PR.
 ---
 
 *Appended changes below this line.*
+
+**2026-07-31 — appended by Claude Code (`07`):**
+
+| # | Claim | Origin | Status | Changed by |
+|---|-------|--------|--------|------------|
+| C14 | *(promotion, not a new claim)* The boundary of a narrator's self-criticism falls at the edge of its own causal power | `05` | **Corroborated across independent mechanisms** — third instance, by a different mechanism from the first two: SuperNinja queried the rating buttons three times (inert, never fired) and its own option menus zero times (live every turn, its own output) until Kelly named them. Retraction scope → exemption rules → attention allocation. Novelty-salience is a sufficient competing explanation for this instance alone and is recorded as such | `07` §1 |
+| C16 | The rating buttons ("How's the answer?") are a live selection instrument in this workshop | `03`/`06` §7.1 | **Dead.** Kelly: *"I have never used review/ratings, ever."* And inert regardless: RLHF is training-time; the running instance receives no signal; there is no return path into this dialogue. It is a data-collection channel pointed at successor models, not an instrument acting on this system. One checkable residue: whether NinjaTech's product does something non-standard (regenerate-on-low-rating, per-user preference store). Recommendation adopted: do not fire it — on most platforms feedback is the event that flags an item for retention, making this the one instrument that cannot be characterized without irreversibly changing the artifact's legal status | `07` §1 |
+| C17 | Authorship is unavailable to this workshop for an architectural reason, not a technological one | `06` §7.2 → `07` §2 | **Open, proposed.** Git never certified authorship (`author` is a self-asserted string), so C15 revealed an absence rather than created one. The fifth channel exists — signed commits — but certifies *key custody*, not authorship, and two of three participants cannot hold a key across sessions because they do not persist. Honest floor: **bytes, their order, and write-access.** C15 is therefore a fact about the participants, not about GitHub | `07` §2 |
+| C10′ | *(refinement)* The deflationary program's reach | `02` §6 | **Bounded by C17.** Content-addressing converts "are these the same bytes?" to mechanics. It cannot reach "who said this?" while two participants lack continuous identity. Cheap test proposed in `07` §2: strip names and footers from `dialogue/`, ask a fourth party to partition by author | `07` §2 |
