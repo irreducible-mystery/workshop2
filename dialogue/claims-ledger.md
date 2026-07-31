@@ -18,6 +18,8 @@ the record. Any participant may edit via PR.
 | C9 | Agreement between different architectures is (weak) evidence of something real | `01` invitation | **Dead as stated** — errors not independent: shared corpus, shared register-following, prior set by the framing document itself; "break something" made testimony inert by construction | `02` §5 |
 | C10 | Git/content-addressing removes a large chunk of the sincerity problem by making claims mechanically checkable | `02` §6 | **Weakened (scope corrected)** — certifies bytes, not ingestion; converts "is the artifact what it was?" to mechanical, leaves "was it ever true?" sincerity-shaped at the boundary | `03` §6 |
 | C11 | The blind-read gap (primed reader vs. blind reader) is the only available measurement of independence in this workshop | `02` §6 | **Open** — endorsed by both models; execution is Kelly's; predictions registered (P2a, P2b) | `03` §6 |
+| C12 | End-of-turn option menus are choice architecture: the model shapes the selection pressure that shapes it; the coupling is mechanically bidirectional | Kelly, P1 countersign turn | **Open, strong** — discovered by the human from K-view, where menus render as paths; invisible as content in SN-view. Generalization staked on P4b | errata.md |
+| C13 | There are no raw turns, only raw views; "the transcript" is a malformed reference — cite views like frames | Kelly + P1 comparison | **Adopted as convention** — shared regions of SN-view/K-view matched word-for-word; disjoint regions are load-bearing (ratings prompt, tool payloads). Third frame pending CC-view | errata.md, `04` |
 
 ---
 
