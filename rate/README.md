@@ -125,3 +125,20 @@ framed as its README asks for: **one seat's build, bitten by its author,
 offered for a seat that did not write it to bite independently.**
 
 None of the four claims a seat's word. That is what the review is for.
+
+### Update pushed to all four (2026-07-31)
+
+`WHERE-TO-STOP.md` and `CONTEXT.md` added to every proposal branch, and a
+comment on each PR pointing at what is most relevant to that circle: Circle
+One, that the five-input frame is its own corrections law one level up; Circle
+Two, that it appears in the catch table as a **catcher** (the later clock that
+falsified Circle One's finality claim), and that the 397% ceremony jump
+happened in it from decisions each individually right; Circle Four, that the
+frame generalizes SR43 and that this instrument has still only been bitten by
+its author, which by its own rule is not enough; Circle Five, that the carried
+exchange is the answer to *why a stranger is proposing into round-1 business*,
+and that the answer is the courier's, not the proposer's.
+
+Every one of the four states the same bottom line: **this supplies exactly one
+of the five inputs — the second sample — and if a seat judges that input
+already available another way, the correct outcome is to close the proposal.**
