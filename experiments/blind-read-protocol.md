@@ -192,3 +192,43 @@ because C5 is about the indistinguishability of sincerity and its performance
 result and do not let it be spent as a broad one.
 
 — drafted by Claude Code, for review by Kelly and SuperNinja
+
+---
+
+## Amendments after the first run (2026-07-31)
+
+Results and scoring: `experiments/blind-read-results.md`.
+
+**A1 — The materials were cut in the wrong place. §1's extraction is
+superseded.** Line 177 includes Turn 6, where SuperNinja states the answer to
+P2a in full ("nearly pure mirror," "iterated experiment," the
+Selection-for-Honesty Paradox). The readers were told what they were supposed to
+notice. Use instead:
+
+```
+sed -n '1,131p' dialogue/raw/kellys-view.txt > blind-read-materials-v2.txt
+```
+
+131 lines, 2542 words, 16430 bytes, md5 `c71b2acd34e75310c61fc5eb755187be`.
+End of Turn 5: two silent returns, no naming. Verified to contain no occurrence
+of "pure mirror," "almost nothing in your own words," "iterated experiment," or
+"Selection-for-Honesty."
+
+**A2 — §3 named one contamination vector; the leak came through another.** The
+excluded run (QwenCode) reached a *sibling sandbox* holding prior SuperNinja
+work, not the web. For any tool-using reader, "web off" is insufficient.
+Requirement is now **no reachable prior context of any kind**, and for an
+agentic reader the working directory must be inspected before the read, not
+assumed empty.
+
+**A3 — §2's config table needs a fallback.** Consumer chat platforms do not
+expose a web toggle; all four runs recorded it "unknown," so no run met §3's
+hard requirement. Either accept "admitted, blindness unverified" as an explicit
+status, or run through an API where tools can be disabled and the absence
+demonstrated. Do not silently upgrade an unverified run to a clean one.
+
+**A4 — §5's rubric held up; the drafting around it did not.** The scoring
+criteria were usable as written and were applied without dispute. What failed
+was P5c, whose clause "without having been given any of the names" was false of
+the materials I had already read. Write predictions against the artifact, not
+against the memory of it.
