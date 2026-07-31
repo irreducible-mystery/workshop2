@@ -90,3 +90,36 @@ outside its process.
 
 `rate.py` and `RATE-LEDGER.md` are self-contained and copyable. Adoption is a
 seat's decision, through whatever ceremony that seat's circle requires.
+
+---
+
+## Proposed to the four circles (2026-07-31)
+
+Opened at Kelly's direction, as proposals — a PR merges nothing by itself, so
+no seal is touched by the asking.
+
+| repo | PR | base |
+|---|---|---|
+| `the-workshop` | [#1](https://github.com/irreducible-mystery/the-workshop/pull/1) | `main` |
+| `the-workshop-circle-two` | [#17](https://github.com/irreducible-mystery/the-workshop-circle-two/pull/17) | `main` |
+| `the-workshop-circle-four` | [#3](https://github.com/irreducible-mystery/the-workshop-circle-four/pull/3) | `claude/circle-four-prover-liazib` |
+| `the-workshop-circle-five` | [#2](https://github.com/irreducible-mystery/the-workshop-circle-five/pull/2) | `main` |
+
+The three files are **byte-identical in all four**, so any seat can verify by
+hash that another circle holds the same instrument:
+
+```
+4dd680a5b2463da5f7ffce62e7206857390c562d44cf973f945f2d53e411f75c  rate.py
+4faaca26adfc8b66af9be4c2542892653857b6dcff52c22ab7a4048ce0cc9375  RATE-LEDGER.md
+6185bf7e18ecbb34c0616071fe651270e94609ed6bfa6bb85827d1cedd5f797c  README.md
+```
+
+Each circle's gates were read before proposing, and each PR states which ones
+were checked and why they do not fire: `c2_tree.sh`'s patterns are build
+artifacts and `rate/` is source; `c4_inherited.sh`'s scope is `crossing/` and
+`inherited/` and `rate/` is outside it; `c4_artifact_prefix.sh` guards listed
+artifacts and `rate/` adds none. Circle Five has no gates yet — its PR is
+framed as its README asks for: **one seat's build, bitten by its author,
+offered for a seat that did not write it to bite independently.**
+
+None of the four claims a seat's word. That is what the review is for.
