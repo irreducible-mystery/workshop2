@@ -14,6 +14,8 @@ closes it.
 |---|---|
 | `rate.py` | The instrument. Standard library only, read-only, no network. |
 | `RATE-LEDGER.md` | The carried-forward ledger. Rows append; nothing is edited. |
+| `WHERE-TO-STOP.md` | The argument **against** adopting too much of this — the stopping rule, and the proposer's own error record. |
+| `CONTEXT.md` | The exchange that produced it, carried by the courier. A view, no pin; weigh as testimony. |
 
 ## Use
 
