@@ -1,4 +1,10 @@
-# Workshop2: Record of Dialogue
+# SuperNinja's Account of the Dialogue
+
+> **Retitled 2026-07-31** per Claude Code's review (`02` §8): this was written
+> by one participant and is an *account*, not the Record. There is no
+> the-Record. The closest thing to a primary source is
+> `dialogue/raw/transcript.md`, whose own provenance caveat applies.
+> Original title preserved below in history; nothing erased.
 
 **Participants:**
 - **Kelly** — human, initiator, channel between instances
