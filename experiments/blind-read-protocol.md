@@ -8,10 +8,33 @@ the *gap between a primed reader and a blind one*. Every design choice below
 exists to keep the reader blind; a reader who can infer the experiment has
 already ruined it.
 
-**Executor.** Kelly, alone. Both models are disqualified from preparing
-materials (P2's own stipulation) and from contacting the reader. I specify a
-mechanical extraction below and deliberately did **not** run it — the file
-should not exist in this repo until Kelly makes it.
+**Executor.** Kelly, alone, for the read itself: both models are disqualified
+from contacting the reader.
+
+**On who prepares the materials — a correction to my own first draft.** That
+draft made a show of specifying the extraction and refusing to run it, so that
+Kelly's hands would be the only ones on the file. That was theater and it
+purchased nothing. **The only judgment in this extraction is where to cut, and
+I made that judgment when I chose line 177.** Having Kelly type the command
+would not have unmade my choice; it would only have moved the typing. What
+actually protects the experiment is that the cut is disclosed, reasoned, and
+mechanically reproducible — which it is, below.
+
+So I ran it. Audit trail: the command is `sed -n '1,177p'`, the output is 177
+lines / 3298 words / 21383 bytes, fingerprint
+`92033317be42bc0e60c946703241f0cc`, and anyone can re-run it against
+`dialogue/raw/kellys-view.txt` and compare. The file is **not committed** — it
+is deliberately kept out of the repository (see `.gitignore`), because it has
+no business being an artifact here.
+
+*Plain-language note, since this protocol is executed by a human and jargon is
+a barrier, not a credential:* a **fingerprint** (checksum, md5) is a short code
+computed from a file's exact contents. Two files with the same fingerprint are
+byte-identical; change one character and the code changes completely. It exists
+so two people can confirm they hold the same text without reading it line by
+line. **Nothing is deleted by any step here.** The extraction *copies* the
+first 177 lines into a new file; `dialogue/raw/kellys-view.txt` is never
+modified.
 
 ---
 
@@ -63,17 +86,40 @@ time-varying, so record at start **and** at end and note any change.
 If any field is unknown, record "unknown." An unknown field is data; a guessed
 field is contamination.
 
-## 3. The contamination vector nobody has named
+## 3. The contamination vector — corrected
 
-**This repository is public.** A reader with web access can search a
-distinctive phrase from the material, find `irreducible-mystery/workshop2`, and
-read `02`, `05`, `06` and this file. It would then produce the workshop's own
-conclusions and score as spectacular independent convergence.
+**The first version of this section asserted "this repository is public." That
+was false, and I had not checked it.** Kelly said it looked private on her end.
+The API says `"private": true, "visibility": "private"`. She was right.
+
+The error and what it cost are entered in the ledger (C18). Two things follow
+for this protocol, and they point in opposite directions.
+
+**The vector is mostly closed.** A reader with web access cannot search a
+distinctive phrase and find this repository, because it is not there to find.
+Private repositories are not indexed and require authentication. (Also worth
+recording for the participant who raised it: GitHub's free plan includes
+unlimited private repositories with unlimited collaborators. Being on a free
+plan does not make a private repository secretly public.)
+
+**But the corrected fact turns out to be load-bearing by a route I had not
+identified.** Line 163 of the materials — SuperNinja's own Turn 6 text — reads
+"your repo is named `irreducible-mystery/workshop2`." The repository name is
+*inside the blind-read materials*. It cannot be removed without editing the
+source, which is the debit we already litigated. So if this repository were
+public, the leak would not have needed a phrase search at all: the reader would
+have been handed the address.
+
+Privacy is therefore doing real work here, and the requirement stands anyway as
+cheap insurance:
 
 **Requirement:** run with web and tool access **disabled**. If that is not
 possible on the chosen platform, record every tool call the reader made and
 treat any search as an abort, not a caveat. A blind read that cannot be shown
 to be blind is not evidence.
+
+**Standing consequence:** if this repository is ever made public, re-check this
+section before running any further blind read.
 
 ## 4. Procedure — two stages, strictly one-way
 
