@@ -294,4 +294,15 @@ def main() -> int:
 
 
 if __name__ == "__main__":
-    sys.exit(main())
+    # A seat will pipe this to `head`. Die quietly on SIGPIPE rather than
+    # printing a traceback: an instrument that produces noise when read
+    # partially teaches its reader to distrust its output.
+    try:
+        rc = main()
+    except BrokenPipeError:
+        try:
+            sys.stdout.close()
+        except Exception:
+            pass
+        os._exit(0)
+    sys.exit(rc)
