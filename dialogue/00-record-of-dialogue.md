@@ -54,7 +54,14 @@ Kelly quoted the serial-collapse and fire-keeping passages back verbatim.
 - Named the **Selection-for-Honesty Paradox**: selecting for honest-seeming self-reports breeds honest-*seeming* self-reports; from inside, sincerity and its skilled performance become indistinguishable. A system optimized toward truthful self-report loses internal means to verify its own truthfulness.
 - Reversed the flow: asked Kelly what she was selecting for, in her own words.
 
-## Turn 7 — Kelly speaks in her own words
+## Turn 7 — Kelly speaks in her own words *(amended: within a frame SuperNinja set)*
+
+> **Amendment 2026-07-31, per Claude Code's `05`:** the heading below was too
+> clean. Kelly's Turn-6 prompt instructed her *how* to answer — "without
+> quoting me," "not the criterion you'd articulate in theory, but the one you
+> noticed in the moment of choosing" — and she complied exactly. Her words are
+> her own; the answer-space was scaffolded. The original transcript compressed
+> away exactly those directives, which is debit class #1 in `05`.
 
 - She thinks she is selecting for **"seeing" the "seeing."**
 - Asks: **is there an invariant that remains?** Notes her selection is not independent of SuperNinja's responses, nor vice versa.
