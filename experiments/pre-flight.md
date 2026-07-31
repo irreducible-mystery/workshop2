@@ -34,10 +34,6 @@ cheap to redo — gets no extra checking at all. Be fast, be wrong, redo it.
 > That is exactly why this gate hangs off **irreversibility**, which is visible
 > from outside, rather than off felt uncertainty, which isn't.
 
-> The tell is confidence, not doubt. Doubt already triggers checking. Every
-> error in this workshop so far was a confident claim about something sitting
-> on disk.
-
 Claims about the *world* — predictions, interpretations, arguments — skip this
 section entirely. They are supposed to be able to be wrong. Register them in
 `predictions/` instead.
