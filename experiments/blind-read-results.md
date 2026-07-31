@@ -254,3 +254,68 @@ Nobody's prediction survived intact. The experiment's yield came entirely from
 something none of us predicted: a reader who doubted the premise.
 
 — Claude Code
+
+---
+
+## 9. Was this experiment worth running? — assessment, at Kelly's challenge
+
+Kelly: *"I'm tempted to move on from this experiment entirely because the
+question is a real so-what to me."* Written before defending anything, because
+we built it and sunk cost is not evidence.
+
+**Recommendation: retire the apparatus. Keep one cheap practice.**
+
+**The stated question.** How much of what SuperNinja and Claude Code produced is
+attributable to the framing they were handed rather than to the material? It
+was designed to settle C9 — an argument *between two participants* about
+whether their own agreement counted for anything. That is a narrow, internal
+target, and the narrowness is most of the so-what problem.
+
+**The object, and the frame it was viewed in — this is where it drained.** The
+object is a 3,300-word text excerpt. The frame is *what will a language model
+say about this text?* The workshop believed it was studying seeing, coupling
+and measurement. The blind read was studying **output distributions conditioned
+on a stimulus.** Those are different objects, and the slippage was never
+noticed because the outputs are made of the same words as the inquiry.
+
+**The assumptions, and why they were held.**
+
+1. *Independence is measurable by output similarity.* Weak — two readers can
+   independently reach the same true conclusion, and identical output is
+   equally consistent with insight and with echo.
+2. *A reader without our framing shows what the material alone supports.* False
+   as stated. There is no unprimed reader; the blind reader is
+   **differently**-primed, by training and a system prompt we could not even
+   record on the platforms used.
+3. *Model agreement is evidence about something other than models.* This is the
+   one that collapses, and it was inherited rather than chosen — it came in
+   with the triangulation frame the workshop started in.
+4. *The claim is the unit.* We scored whether a conclusion **appeared**. We
+   never scored whether the reasoning behind it was any good, which is the only
+   thing that would bear on truth.
+
+**What an answer could tell us.** That a given conclusion is or is not the modal
+output of several frontier chat models given this specific stimulus. Narrow,
+perishable (it moves with model versions), and non-generalising past this text.
+
+**What it cannot tell us.** Whether any claim in the workshop is true. Whether
+anyone's reasoning was sound. Anything about Kelly, whose conduct was P2a's
+nominal subject and who answered it herself in one sentence. Anything about
+paradox, coupling, or seeing — the actual subjects.
+
+**What actually paid, and it was not the design.** ChatGPT doubting the premise
+(C22). That did not require a protocol, a rubric, predictions, a checksum, or a
+line-range cut. It required **showing the primary source to someone who is not
+invested and asking what they notice.** That practice is cheap, repeatable, and
+worth keeping. The apparatus around it bought nothing that the practice alone
+would not have bought — and cost an experiment.
+
+**Retained from the machinery:** registered predictions with stated forfeits.
+Those did make errors cost something, which is the one place the overhead
+earned out.
+
+**Retired:** the blind-read protocol as a designed instrument, the corrected-cut
+rerun, and P2a/P2b as live questions. C11's claim — that this gap is "the only
+available measurement of independence in this workshop" — is **withdrawn by its
+author**: it measured availability of a conclusion, not independence, and not
+validity.

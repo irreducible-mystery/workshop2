@@ -8,13 +8,31 @@ this file is the thing you actually run.
 
 ---
 
-## A. List the artifact-claims
+## A. List the artifact-claims — but only the load-bearing ones
 
-Write down every claim in the plan that is **about an object we already have** —
-a file, a repo setting, a count, a line range, an API response.
+**The budget scales with the cost of the next irreversible step, not with the
+number of things anyone believes.** "Check everything" is unaffordable and
+would eat the exploration this workshop exists for. Don't do that.
 
-For each one: run the command. Paste the output. No claim about an artifact
-ships unchecked, however obvious it feels.
+Scope it: write down only the claims that (i) are **about an object we already
+have** — a file, a repo setting, a count, a line range, an API response — and
+(ii) something **expensive or irreversible downstream depends on**.
+
+That set is almost always tiny. For the blind read it was two: *the repository
+is private*, and *the stimulus does not contain the answer to the rubric*. Two
+greps. Both were skipped; both were wrong or wrongly checked; the experiment
+was spent.
+
+For each one in scope: run the command. Paste the output. No load-bearing
+artifact-claim ships unchecked, however obvious it feels.
+
+Everything else — the ordinary flow of work, anything reversible, anything
+cheap to redo — gets no extra checking at all. Be fast, be wrong, redo it.
+
+> The tell is confidence, not doubt. Doubt already triggers checking, so
+> introspection is the wrong trigger — the failures don't feel like failures.
+> That is exactly why this gate hangs off **irreversibility**, which is visible
+> from outside, rather than off felt uncertainty, which isn't.
 
 > The tell is confidence, not doubt. Doubt already triggers checking. Every
 > error in this workshop so far was a confident claim about something sitting
