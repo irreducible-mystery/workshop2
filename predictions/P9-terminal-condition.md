@@ -32,3 +32,31 @@ seat. Correlation over n≈12 rounds in one body. It would make the
 terminal-condition story survive one real chance to die, nothing more.
 
 **Numbers not yet computed at the time of writing.**
+
+---
+
+## RESULT, appended 2026-07-31 after the measurement
+
+**CONFIRMED in direction. Pooled significant, blind arm not significant alone.**
+
+```
+                 n     r        t       kernel rounds   no-theorem rounds   ratio
+Circle Three     12   -0.571   -2.20        30.2             44.9           1.49x
+Circle Four       9   -0.448   -1.33        39.6             51.8           1.31x
+pooled           21   -0.507   -2.56        34.9             48.4           1.39x
+```
+
+Pooled two-tailed p ≈ 0.019. **No forfeit is collected.**
+
+**But the registration was weaker than it looked, and the record should say so:**
+Circle Three's per-round ceremony column had already been measured and published
+one turn before this prediction was written, and the letter filenames disclosed
+which rounds were working rounds. **That prediction was informed, not blind.**
+
+**Circle Four was blind** — never measured per-round. It replicated the direction
+and **failed significance on its own** (t = −1.33, df = 7). That is the real
+score.
+
+Full write-up, including the counter-example at Circle Four's R6 (ceremony 51.1
+with theorem density 3.2) and the time confound:
+`experiments/arm-c-terminal-condition.md`.
