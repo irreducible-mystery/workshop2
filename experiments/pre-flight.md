@@ -98,3 +98,25 @@ Pre-flight: A [n claims checked] B [n criteria] C [dry-run: where] D [cost, whos
 
 If any letter is skipped, say which and why. A skipped check that is disclosed
 is a known risk. A skipped check that is silent is how we got here.
+
+---
+
+## Addendum — force-push takes the gate (2026-07-31, after a live failure)
+
+A force-push is an irreversible step. It gets §A like any other.
+
+**The one required check**, run *before* rebuilding a branch or forcing:
+
+```
+git fetch origin main <branch>
+git merge-base --is-ancestor origin/<branch> origin/main   # safe to discard?
+git log --oneline origin/<branch> ^origin/main             # what would be lost
+```
+
+If the second command says the branch is **not** an ancestor of main, the
+branch carries unmerged work — rebase or merge it, never discard it.
+
+Recorded because this check was run correctly one turn, skipped the next, and
+the skip cost a commit that had to be recovered by cherry-pick. Attention was
+on content both times. That is precisely why the gate hangs off the *action*
+being irreversible rather than off anyone noticing that it matters.
