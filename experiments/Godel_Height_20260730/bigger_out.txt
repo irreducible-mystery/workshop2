@@ -1,0 +1,73 @@
+==========================================================================
+PART A  --  validate the generic engine
+==========================================================================
+  G=Z2xZ2 complex d^2=0: True
+  -- G = Z2xZ2 (k=2), trivial action: engine vs LHS assoc-graded --
+     M=    Z2: engine inv=[2, 2, 2]  LHS inv=[2, 2, 2]  [MATCH]
+     M=    Z4: engine inv=[2, 2, 2]  LHS inv=[2, 2, 2]  [MATCH]
+     M= Z2xZ2: engine inv=[2, 2, 2, 2, 2, 2]  LHS inv=[2, 2, 2, 2, 2, 2]  [MATCH]
+     M= Z2xZ4: engine inv=[2, 2, 2, 2, 2, 2]  LHS inv=[2, 2, 2, 2, 2, 2]  [MATCH]
+     M= Z4xZ4: engine inv=[2, 2, 2, 2, 2, 2]  LHS inv=[2, 2, 2, 2, 2, 2]  [MATCH]
+  engine == LHS on Z2xZ2 family: True
+
+==========================================================================
+PART B  --  G = Z2xZ2xZ2  (frame-bundle), structural facts test
+==========================================================================
+  M=    Z2 (1 commuting action-tuples, 0 skipped):
+     trivial rank = 6   rank range = 6..6
+        rank 6  inv=        [2, 2, 2, 2, 2, 2] : 1 actions
+     FACT (i) trivial maximizes rank? True    FACT (ii) floor (min>0)? True (min rank 6)
+  M=    Z4 (8 commuting action-tuples, 0 skipped):
+     trivial rank = 6   rank range = 6..6
+        rank 6  inv=        [2, 2, 2, 2, 2, 2] : 8 actions
+     FACT (i) trivial maximizes rank? True    FACT (ii) floor (min>0)? True (min rank 6)
+  M= Z2xZ2 (22 commuting action-tuples, 0 skipped):
+     trivial rank = 12   rank range = 3..12
+        rank 3  inv=                 [2, 2, 2] : 21 actions
+        rank 12  inv=[2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2] : 1 actions
+     FACT (i) trivial maximizes rank? True    FACT (ii) floor (min>0)? True (min rank 3)
+
+==========================================================================
+PART B  --  G = Z4xZ2  (frame-bundle), structural facts test
+==========================================================================
+  M=    Z2 (1 commuting action-tuples, 0 skipped):
+     trivial rank = 3   rank range = 3..3
+        rank 3  inv=                 [2, 2, 2] : 1 actions
+     FACT (i) trivial maximizes rank? True    FACT (ii) floor (min>0)? True (min rank 3)
+  M=    Z4 (4 commuting action-tuples, 0 skipped):
+     trivial rank = 3   rank range = 3..3
+        rank 3  inv=                 [2, 2, 2] : 3 actions
+        rank 3  inv=                 [2, 2, 4] : 1 actions
+     FACT (i) trivial maximizes rank? True    FACT (ii) floor (min>0)? True (min rank 3)
+  M= Z2xZ2 (10 commuting action-tuples, 0 skipped):
+     trivial rank = 6   rank range = 1..6
+        rank 1  inv=                       [2] : 6 actions
+        rank 3  inv=                 [2, 2, 2] : 3 actions
+        rank 6  inv=        [2, 2, 2, 2, 2, 2] : 1 actions
+     FACT (i) trivial maximizes rank? True    FACT (ii) floor (min>0)? True (min rank 1)
+  M= Z2xZ4 (32 commuting action-tuples, 0 skipped):
+     trivial rank = 6   rank range = 3..6
+        rank 3  inv=                 [2, 2, 2] : 8 actions
+        rank 3  inv=                 [2, 2, 4] : 4 actions
+        rank 4  inv=              [2, 2, 2, 2] : 10 actions
+        rank 4  inv=              [2, 2, 2, 4] : 2 actions
+        rank 5  inv=           [2, 2, 2, 2, 2] : 4 actions
+        rank 6  inv=        [2, 2, 2, 2, 2, 2] : 3 actions
+        rank 6  inv=        [2, 2, 2, 2, 2, 4] : 1 actions
+     FACT (i) trivial maximizes rank? True    FACT (ii) floor (min>0)? True (min rank 3)
+  M= Z4xZ4 (544 commuting action-tuples, 0 skipped):
+     trivial rank = 6   rank range = 1..6
+        rank 1  inv=                       [2] : 48 actions
+        rank 1  inv=                       [4] : 48 actions
+        rank 2  inv=                    [2, 2] : 32 actions
+        rank 3  inv=                 [2, 2, 2] : 192 actions
+        rank 4  inv=              [2, 2, 2, 2] : 108 actions
+        rank 4  inv=              [2, 2, 2, 4] : 12 actions
+        rank 5  inv=           [2, 2, 2, 2, 2] : 36 actions
+        rank 5  inv=           [2, 2, 2, 2, 4] : 12 actions
+        rank 6  inv=        [2, 2, 2, 2, 2, 2] : 34 actions
+        rank 6  inv=        [2, 2, 2, 2, 2, 4] : 21 actions
+        rank 6  inv=        [2, 2, 2, 2, 4, 4] : 1 actions
+     FACT (i) trivial maximizes rank? True    FACT (ii) floor (min>0)? True (min rank 1)
+
+[written] results/cohomology_bigger.json

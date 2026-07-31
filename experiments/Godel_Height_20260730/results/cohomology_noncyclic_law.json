@@ -1,0 +1,135 @@
+{
+  "part_A": [
+    {
+      "k": 1,
+      "|G|": 2,
+      "ring_dimH2": 1,
+      "direct_rank": 1,
+      "agree": true,
+      "note": "|H2|=2 inv=[2]"
+    },
+    {
+      "k": 2,
+      "|G|": 4,
+      "ring_dimH2": 3,
+      "direct_rank": 3,
+      "agree": true,
+      "note": "|H2|=8 inv=[2, 2, 2]"
+    },
+    {
+      "k": 3,
+      "|G|": 8,
+      "ring_dimH2": 6,
+      "direct_rank": null,
+      "agree": null,
+      "note": "DIRECT skipped: |M|^|G|^2 = 2^64 = 18446744073709551616 > cap"
+    }
+  ],
+  "part_B": [
+    {
+      "k": 1,
+      "r": 1,
+      "core": 1,
+      "predict": 1,
+      "direct_rank": 1,
+      "agree": true,
+      "status": "AGREE"
+    },
+    {
+      "k": 1,
+      "r": 2,
+      "core": 1,
+      "predict": 2,
+      "direct_rank": 2,
+      "agree": true,
+      "status": "AGREE"
+    },
+    {
+      "k": 1,
+      "r": 3,
+      "core": 1,
+      "predict": 3,
+      "direct_rank": 3,
+      "agree": true,
+      "status": "AGREE"
+    },
+    {
+      "k": 2,
+      "r": 1,
+      "core": 3,
+      "predict": 3,
+      "direct_rank": 3,
+      "agree": true,
+      "status": "AGREE"
+    },
+    {
+      "k": 2,
+      "r": 2,
+      "core": 3,
+      "predict": 6,
+      "direct_rank": null,
+      "agree": null,
+      "status": "PREDICT-ONLY (capped)"
+    },
+    {
+      "k": 2,
+      "r": 3,
+      "core": 3,
+      "predict": 9,
+      "direct_rank": null,
+      "agree": null,
+      "status": "PREDICT-ONLY (capped)"
+    }
+  ],
+  "part_C": [
+    {
+      "G": "Z4",
+      "|G|": 4,
+      "shape": "cyclic",
+      "|H2|": 2,
+      "rank": 1,
+      "inv": [
+        2
+      ],
+      "note": ""
+    },
+    {
+      "G": "Z2xZ2",
+      "|G|": 4,
+      "shape": "non-cyclic",
+      "|H2|": 8,
+      "rank": 3,
+      "inv": [
+        2,
+        2,
+        2
+      ],
+      "note": "= C(2+1,2) = 3 (elem-ab ring)"
+    },
+    {
+      "G": "Z8",
+      "|G|": 8,
+      "skipped": true,
+      "reason": "|M|^|G|^2 = 2^64 = 18446744073709551616 > cap"
+    },
+    {
+      "G": "Z2xZ4",
+      "|G|": 8,
+      "skipped": true,
+      "reason": "|M|^|G|^2 = 2^64 = 18446744073709551616 > cap"
+    },
+    {
+      "G": "Z2^3",
+      "|G|": 8,
+      "skipped": true,
+      "reason": "|M|^|G|^2 = 2^64 = 18446744073709551616 > cap"
+    }
+  ],
+  "part_D": {
+    "notes": [
+      "M=Z2: Aut(Z2)={id}, so NO nontrivial action of any G exists -- the trivial-action numbers in Parts A-C are the WHOLE story here.",
+      "M=Z2xZ2, G=Z2xZ2: nontrivial actions exist (Aut=GL(2,F2), |.|=6), but a 2-cochain is |M|^(|G|^2)=4^16=4294967296 -- DIRECT is IMPOSSIBLE under the cap. We do NOT claim any nontrivial-action number for non-cyclic G. This is an explicit CANNOT-CLAIM, and the honest boundary of what enumeration reaches."
+    ],
+    "blowup_4^16": 4294967296
+  }
+}

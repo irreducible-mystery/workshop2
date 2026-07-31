@@ -1,0 +1,128 @@
+{
+  "rows": [
+    {
+      "module": "Z2",
+      "orders": [
+        2
+      ],
+      "dim_M2": 1,
+      "even_exponents": [
+        1
+      ],
+      "min_rank": 1,
+      "collapses": false,
+      "P1_even_2rank": false,
+      "P3_pairable_exponents": false
+    },
+    {
+      "module": "Z4",
+      "orders": [
+        4
+      ],
+      "dim_M2": 1,
+      "even_exponents": [
+        2
+      ],
+      "min_rank": 1,
+      "collapses": false,
+      "P1_even_2rank": false,
+      "P3_pairable_exponents": false
+    },
+    {
+      "module": "Z8",
+      "orders": [
+        8
+      ],
+      "dim_M2": 1,
+      "even_exponents": [
+        3
+      ],
+      "min_rank": 0,
+      "collapses": true,
+      "P1_even_2rank": false,
+      "P3_pairable_exponents": false
+    },
+    {
+      "module": "Z2xZ2",
+      "orders": [
+        2,
+        2
+      ],
+      "dim_M2": 2,
+      "even_exponents": [
+        1,
+        1
+      ],
+      "min_rank": 0,
+      "collapses": true,
+      "P1_even_2rank": true,
+      "P3_pairable_exponents": true
+    },
+    {
+      "module": "Z2xZ4",
+      "orders": [
+        2,
+        4
+      ],
+      "dim_M2": 2,
+      "even_exponents": [
+        1,
+        2
+      ],
+      "min_rank": 1,
+      "collapses": false,
+      "P1_even_2rank": true,
+      "P3_pairable_exponents": false
+    },
+    {
+      "module": "Z4xZ4",
+      "orders": [
+        4,
+        4
+      ],
+      "dim_M2": 2,
+      "even_exponents": [
+        2,
+        2
+      ],
+      "min_rank": 0,
+      "collapses": true,
+      "P1_even_2rank": true,
+      "P3_pairable_exponents": true
+    },
+    {
+      "module": "Z2xZ2xZ2",
+      "orders": [
+        2,
+        2,
+        2
+      ],
+      "dim_M2": 3,
+      "even_exponents": [
+        1,
+        1,
+        1
+      ],
+      "min_rank": 1,
+      "collapses": false,
+      "P1_even_2rank": false,
+      "P3_pairable_exponents": false
+    },
+    {
+      "module": "Z3xZ3",
+      "orders": [
+        3,
+        3
+      ],
+      "dim_M2": 0,
+      "even_exponents": [],
+      "min_rank": 0,
+      "collapses": true,
+      "P1_even_2rank": true,
+      "P3_pairable_exponents": true
+    }
+  ],
+  "P1_hits": 6,
+  "P3_hits": 7,
+  "total": 8
+}

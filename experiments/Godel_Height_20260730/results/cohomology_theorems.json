@@ -1,0 +1,107 @@
+{
+  "T1_hyperbolic_sufficiency": {
+    "status": "PROVEN-CONSTRUCTIVE",
+    "ok": true,
+    "rows": [
+      {
+        "module": "Z2xZ2",
+        "H2": 1,
+        "norm_eq_fixed": true
+      },
+      {
+        "module": "Z4xZ4",
+        "H2": 1,
+        "norm_eq_fixed": true
+      },
+      {
+        "module": "Z8xZ8",
+        "H2": 1,
+        "norm_eq_fixed": true
+      },
+      {
+        "module": "Z16xZ16",
+        "H2": 1,
+        "norm_eq_fixed": true
+      }
+    ],
+    "statement": "swap on Z_{2^a}^2 gives (1+u)M=M^u, H^2=0 (a=1..4)"
+  },
+  "T2_deep_lone_sufficiency": {
+    "status": "VERIFIED",
+    "ok": true,
+    "rows": [
+      {
+        "module": "Z8",
+        "u": 3,
+        "is_involution": true,
+        "H2": 1,
+        "collapses": true
+      },
+      {
+        "module": "Z16",
+        "u": 7,
+        "is_involution": true,
+        "H2": 1,
+        "collapses": true
+      }
+    ],
+    "statement": "u=2^{a-1}-1 collapses a lone Z_{2^a}, a>=3 (section-9 deep)"
+  },
+  "T3_shallow_floor_necessity": {
+    "status": "PROVEN-EXHAUSTIVE",
+    "ok": true,
+    "rows": [
+      {
+        "module": "Z2",
+        "n_involutions": 1,
+        "min_H2": 2,
+        "floor": true
+      },
+      {
+        "module": "Z4",
+        "n_involutions": 2,
+        "min_H2": 2,
+        "floor": true
+      },
+      {
+        "module": "Z2xZ4",
+        "n_involutions": 6,
+        "min_H2": 2,
+        "floor": true
+      }
+    ],
+    "statement": "Z2, Z4, Z2xZ4 never collapse: min|H^2|=2 over ALL involutions"
+  },
+  "T4_multiset_invariant_refuted": {
+    "status": "REFUTED (no exponent-multiset-only predicate is exact)",
+    "ok": true,
+    "rows": [
+      {
+        "A": "Z2xZ4 (exps 1,2)",
+        "minA": 2,
+        "collapseA": false,
+        "B": "Z2xZ2xZ4 (exps 1,1,2)",
+        "minB": 1,
+        "collapseB": true,
+        "flip": true
+      },
+      {
+        "A": "Z2xZ4xZ4 (exps 1,2,2)",
+        "minA": 2,
+        "collapseA": false,
+        "B": "Z4xZ4xZ4 (exps 2,2,2)",
+        "minB": 1,
+        "collapseB": true,
+        "flip": true
+      }
+    ],
+    "statement": "collapse is not a clean function of the exponent multiset; best multiset-only predicate scored 17/21 in the search"
+  },
+  "T5_exp_bound": {
+    "status": "PROVEN-EXHAUSTIVE",
+    "ok": true,
+    "worst_exp": 2,
+    "violations": [],
+    "statement": "exp(H^2(Z2,M))|2 (H^2 elementary abelian) for all M & involutions"
+  }
+}

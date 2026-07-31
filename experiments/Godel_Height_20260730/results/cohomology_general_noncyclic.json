@@ -1,0 +1,259 @@
+[
+  {
+    "module": "Z2xZ2",
+    "orders": [
+      2,
+      2
+    ],
+    "action": "trivial",
+    "matrix": [
+      [
+        1,
+        0
+      ],
+      [
+        0,
+        1
+      ]
+    ],
+    "H2_order": 4,
+    "H2_invariants": [
+      2,
+      2
+    ],
+    "H1_order": 4,
+    "herbrand": 1.0
+  },
+  {
+    "module": "Z2xZ2",
+    "orders": [
+      2,
+      2
+    ],
+    "action": "swap",
+    "matrix": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        0
+      ]
+    ],
+    "H2_order": 1,
+    "H2_invariants": [],
+    "H1_order": 1,
+    "herbrand": 1.0
+  },
+  {
+    "module": "Z2xZ2",
+    "orders": [
+      2,
+      2
+    ],
+    "action": "shear",
+    "matrix": [
+      [
+        1,
+        1
+      ],
+      [
+        0,
+        1
+      ]
+    ],
+    "H2_order": 1,
+    "H2_invariants": [],
+    "H1_order": 1,
+    "herbrand": 1.0
+  },
+  {
+    "module": "Z2xZ4",
+    "orders": [
+      2,
+      4
+    ],
+    "action": "trivial",
+    "matrix": [
+      [
+        1,
+        0
+      ],
+      [
+        0,
+        1
+      ]
+    ],
+    "H2_order": 4,
+    "H2_invariants": [
+      2,
+      2
+    ],
+    "H1_order": 4,
+    "herbrand": 1.0
+  },
+  {
+    "module": "Z2xZ4",
+    "orders": [
+      2,
+      4
+    ],
+    "action": "negate-Z4",
+    "matrix": [
+      [
+        1,
+        0
+      ],
+      [
+        0,
+        3
+      ]
+    ],
+    "H2_order": 4,
+    "H2_invariants": [
+      2,
+      2
+    ],
+    "H1_order": 4,
+    "herbrand": 1.0
+  },
+  {
+    "module": "Z4xZ4",
+    "orders": [
+      4,
+      4
+    ],
+    "action": "trivial",
+    "matrix": [
+      [
+        1,
+        0
+      ],
+      [
+        0,
+        1
+      ]
+    ],
+    "H2_order": 4,
+    "H2_invariants": [
+      2,
+      2
+    ],
+    "H1_order": 4,
+    "herbrand": 1.0
+  },
+  {
+    "module": "Z4xZ4",
+    "orders": [
+      4,
+      4
+    ],
+    "action": "swap",
+    "matrix": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        0
+      ]
+    ],
+    "H2_order": 1,
+    "H2_invariants": [],
+    "H1_order": 1,
+    "herbrand": 1.0
+  },
+  {
+    "module": "Z4xZ4",
+    "orders": [
+      4,
+      4
+    ],
+    "action": "neg-both",
+    "matrix": [
+      [
+        3,
+        0
+      ],
+      [
+        0,
+        3
+      ]
+    ],
+    "H2_order": 4,
+    "H2_invariants": [
+      2,
+      2
+    ],
+    "H1_order": 4,
+    "herbrand": 1.0
+  },
+  {
+    "module": "Z3xZ3",
+    "orders": [
+      3,
+      3
+    ],
+    "action": "trivial",
+    "matrix": [
+      [
+        1,
+        0
+      ],
+      [
+        0,
+        1
+      ]
+    ],
+    "H2_order": 1,
+    "H2_invariants": [],
+    "H1_order": 1,
+    "herbrand": 1.0
+  },
+  {
+    "module": "Z3xZ3",
+    "orders": [
+      3,
+      3
+    ],
+    "action": "swap",
+    "matrix": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        0
+      ]
+    ],
+    "H2_order": 1,
+    "H2_invariants": [],
+    "H1_order": 1,
+    "herbrand": 1.0
+  },
+  {
+    "module": "Z3xZ3",
+    "orders": [
+      3,
+      3
+    ],
+    "action": "neg-both",
+    "matrix": [
+      [
+        2,
+        0
+      ],
+      [
+        0,
+        2
+      ]
+    ],
+    "H2_order": 1,
+    "H2_invariants": [],
+    "H1_order": 1,
+    "herbrand": 1.0
+  }
+]

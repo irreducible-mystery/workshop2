@@ -1,0 +1,333 @@
+{
+  "n": 21,
+  "scores": {
+    "A_P3_all_pairable": 10,
+    "B_pairs_or_deep_leftover": 15,
+    "C_staircase_absorb": 15,
+    "D_shallows_le_deeps": 17
+  },
+  "best": "D_shallows_le_deeps",
+  "rows": [
+    {
+      "orders": [
+        2
+      ],
+      "E": [
+        1
+      ],
+      "collapse": false,
+      "A_P3_all_pairable": false,
+      "B_pairs_or_deep_leftover": false,
+      "C_staircase_absorb": false,
+      "D_shallows_le_deeps": false
+    },
+    {
+      "orders": [
+        4
+      ],
+      "E": [
+        2
+      ],
+      "collapse": false,
+      "A_P3_all_pairable": false,
+      "B_pairs_or_deep_leftover": false,
+      "C_staircase_absorb": false,
+      "D_shallows_le_deeps": false
+    },
+    {
+      "orders": [
+        8
+      ],
+      "E": [
+        3
+      ],
+      "collapse": true,
+      "A_P3_all_pairable": false,
+      "B_pairs_or_deep_leftover": true,
+      "C_staircase_absorb": true,
+      "D_shallows_le_deeps": true
+    },
+    {
+      "orders": [
+        16
+      ],
+      "E": [
+        4
+      ],
+      "collapse": true,
+      "A_P3_all_pairable": false,
+      "B_pairs_or_deep_leftover": true,
+      "C_staircase_absorb": true,
+      "D_shallows_le_deeps": true
+    },
+    {
+      "orders": [
+        2,
+        2
+      ],
+      "E": [
+        1,
+        1
+      ],
+      "collapse": true,
+      "A_P3_all_pairable": true,
+      "B_pairs_or_deep_leftover": true,
+      "C_staircase_absorb": true,
+      "D_shallows_le_deeps": true
+    },
+    {
+      "orders": [
+        2,
+        4
+      ],
+      "E": [
+        1,
+        2
+      ],
+      "collapse": false,
+      "A_P3_all_pairable": false,
+      "B_pairs_or_deep_leftover": false,
+      "C_staircase_absorb": true,
+      "D_shallows_le_deeps": false
+    },
+    {
+      "orders": [
+        2,
+        8
+      ],
+      "E": [
+        1,
+        3
+      ],
+      "collapse": false,
+      "A_P3_all_pairable": false,
+      "B_pairs_or_deep_leftover": false,
+      "C_staircase_absorb": false,
+      "D_shallows_le_deeps": true
+    },
+    {
+      "orders": [
+        2,
+        16
+      ],
+      "E": [
+        1,
+        4
+      ],
+      "collapse": true,
+      "A_P3_all_pairable": false,
+      "B_pairs_or_deep_leftover": false,
+      "C_staircase_absorb": false,
+      "D_shallows_le_deeps": true
+    },
+    {
+      "orders": [
+        4,
+        4
+      ],
+      "E": [
+        2,
+        2
+      ],
+      "collapse": true,
+      "A_P3_all_pairable": true,
+      "B_pairs_or_deep_leftover": true,
+      "C_staircase_absorb": true,
+      "D_shallows_le_deeps": true
+    },
+    {
+      "orders": [
+        4,
+        8
+      ],
+      "E": [
+        2,
+        3
+      ],
+      "collapse": true,
+      "A_P3_all_pairable": false,
+      "B_pairs_or_deep_leftover": false,
+      "C_staircase_absorb": false,
+      "D_shallows_le_deeps": true
+    },
+    {
+      "orders": [
+        4,
+        16
+      ],
+      "E": [
+        2,
+        4
+      ],
+      "collapse": true,
+      "A_P3_all_pairable": false,
+      "B_pairs_or_deep_leftover": false,
+      "C_staircase_absorb": false,
+      "D_shallows_le_deeps": true
+    },
+    {
+      "orders": [
+        8,
+        8
+      ],
+      "E": [
+        3,
+        3
+      ],
+      "collapse": true,
+      "A_P3_all_pairable": true,
+      "B_pairs_or_deep_leftover": true,
+      "C_staircase_absorb": true,
+      "D_shallows_le_deeps": true
+    },
+    {
+      "orders": [
+        8,
+        16
+      ],
+      "E": [
+        3,
+        4
+      ],
+      "collapse": true,
+      "A_P3_all_pairable": false,
+      "B_pairs_or_deep_leftover": true,
+      "C_staircase_absorb": true,
+      "D_shallows_le_deeps": true
+    },
+    {
+      "orders": [
+        16,
+        16
+      ],
+      "E": [
+        4,
+        4
+      ],
+      "collapse": true,
+      "A_P3_all_pairable": true,
+      "B_pairs_or_deep_leftover": true,
+      "C_staircase_absorb": true,
+      "D_shallows_le_deeps": true
+    },
+    {
+      "orders": [
+        2,
+        2,
+        2
+      ],
+      "E": [
+        1,
+        1,
+        1
+      ],
+      "collapse": false,
+      "A_P3_all_pairable": false,
+      "B_pairs_or_deep_leftover": false,
+      "C_staircase_absorb": false,
+      "D_shallows_le_deeps": false
+    },
+    {
+      "orders": [
+        2,
+        2,
+        4
+      ],
+      "E": [
+        1,
+        1,
+        2
+      ],
+      "collapse": true,
+      "A_P3_all_pairable": false,
+      "B_pairs_or_deep_leftover": false,
+      "C_staircase_absorb": false,
+      "D_shallows_le_deeps": false
+    },
+    {
+      "orders": [
+        2,
+        2,
+        8
+      ],
+      "E": [
+        1,
+        1,
+        3
+      ],
+      "collapse": true,
+      "A_P3_all_pairable": false,
+      "B_pairs_or_deep_leftover": true,
+      "C_staircase_absorb": true,
+      "D_shallows_le_deeps": true
+    },
+    {
+      "orders": [
+        2,
+        2,
+        16
+      ],
+      "E": [
+        1,
+        1,
+        4
+      ],
+      "collapse": true,
+      "A_P3_all_pairable": false,
+      "B_pairs_or_deep_leftover": true,
+      "C_staircase_absorb": true,
+      "D_shallows_le_deeps": true
+    },
+    {
+      "orders": [
+        2,
+        4,
+        4
+      ],
+      "E": [
+        1,
+        2,
+        2
+      ],
+      "collapse": false,
+      "A_P3_all_pairable": false,
+      "B_pairs_or_deep_leftover": false,
+      "C_staircase_absorb": false,
+      "D_shallows_le_deeps": false
+    },
+    {
+      "orders": [
+        2,
+        4,
+        8
+      ],
+      "E": [
+        1,
+        2,
+        3
+      ],
+      "collapse": true,
+      "A_P3_all_pairable": false,
+      "B_pairs_or_deep_leftover": false,
+      "C_staircase_absorb": true,
+      "D_shallows_le_deeps": false
+    },
+    {
+      "orders": [
+        4,
+        4,
+        4
+      ],
+      "E": [
+        2,
+        2,
+        2
+      ],
+      "collapse": true,
+      "A_P3_all_pairable": false,
+      "B_pairs_or_deep_leftover": false,
+      "C_staircase_absorb": false,
+      "D_shallows_le_deeps": false
+    }
+  ]
+}

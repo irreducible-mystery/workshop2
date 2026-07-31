@@ -1,0 +1,142 @@
+{
+  "part_A": [
+    {
+      "module": "Z2",
+      "action": "trivial",
+      "|C1|": 4,
+      "|C2|": 8,
+      "|ker delta2|": 8,
+      "|im delta1|": 1,
+      "|H2|": 8,
+      "H2_invariants": [
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "module": "Z4",
+      "action": "trivial",
+      "|C1|": 16,
+      "|C2|": 64,
+      "|ker delta2|": 32,
+      "|im delta1|": 4,
+      "|H2|": 8,
+      "H2_invariants": [
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "module": "Z2xZ2",
+      "action": "trivial",
+      "|C1|": 16,
+      "|C2|": 64,
+      "|ker delta2|": 64,
+      "|im delta1|": 1,
+      "|H2|": 64,
+      "H2_invariants": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ]
+    }
+  ],
+  "part_B": {
+    "Z2xZ2": {
+      "orders": [
+        2,
+        2
+      ],
+      "n_order2_autos": 4,
+      "n_commuting_pairs": 10,
+      "trivial_invariants": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "spectrum": {
+        "[2]": 9,
+        "[2, 2, 2, 2, 2, 2]": 1
+      },
+      "rank_min": 1,
+      "rank_max": 6,
+      "n_nontrivial": 9
+    },
+    "Z4": {
+      "orders": [
+        4
+      ],
+      "n_order2_autos": 2,
+      "n_commuting_pairs": 4,
+      "trivial_invariants": [
+        2,
+        2,
+        2
+      ],
+      "spectrum": {
+        "[2, 2, 2]": 4
+      },
+      "rank_min": 3,
+      "rank_max": 3,
+      "n_nontrivial": 3
+    },
+    "Z2xZ4": {
+      "orders": [
+        2,
+        4
+      ],
+      "n_order2_autos": 6,
+      "n_commuting_pairs": 28,
+      "trivial_invariants": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "spectrum": {
+        "[2, 2, 2, 2, 2, 2]": 4,
+        "[2, 2, 2]": 12,
+        "[2, 2, 2, 2]": 12
+      },
+      "rank_min": 3,
+      "rank_max": 6,
+      "n_nontrivial": 27
+    },
+    "Z4xZ4": {
+      "orders": [
+        4,
+        4
+      ],
+      "n_order2_autos": 28,
+      "n_commuting_pairs": 400,
+      "trivial_invariants": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "spectrum": {
+        "[2]": 144,
+        "[2, 2, 2, 2, 2, 2]": 40,
+        "[2, 2, 2, 2]": 108,
+        "[2, 2]": 84,
+        "[2, 2, 2]": 24
+      },
+      "rank_min": 1,
+      "rank_max": 6,
+      "n_nontrivial": 399
+    }
+  }
+}

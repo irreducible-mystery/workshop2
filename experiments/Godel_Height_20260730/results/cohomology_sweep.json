@@ -1,0 +1,98 @@
+[
+  {
+    "m": 2,
+    "N": 3,
+    "u": 1,
+    "trivial": true,
+    "nH2": 1,
+    "gen_order": 1
+  },
+  {
+    "m": 2,
+    "N": 3,
+    "u": 2,
+    "trivial": false,
+    "nH2": 1,
+    "gen_order": 1
+  },
+  {
+    "m": 2,
+    "N": 4,
+    "u": 1,
+    "trivial": true,
+    "nH2": 2,
+    "gen_order": 2
+  },
+  {
+    "m": 2,
+    "N": 4,
+    "u": 3,
+    "trivial": false,
+    "nH2": 2,
+    "gen_order": 2
+  },
+  {
+    "m": 2,
+    "N": 5,
+    "u": 1,
+    "trivial": true,
+    "nH2": 1,
+    "gen_order": 1
+  },
+  {
+    "m": 2,
+    "N": 5,
+    "u": 4,
+    "trivial": false,
+    "nH2": 1,
+    "gen_order": 1
+  },
+  {
+    "m": 2,
+    "N": 8,
+    "u": 1,
+    "trivial": true,
+    "nH2": 2,
+    "gen_order": 2
+  },
+  {
+    "m": 2,
+    "N": 8,
+    "u": 3,
+    "trivial": false,
+    "nH2": 1,
+    "gen_order": 1
+  },
+  {
+    "m": 2,
+    "N": 8,
+    "u": 5,
+    "trivial": false,
+    "nH2": 1,
+    "gen_order": 1
+  },
+  {
+    "m": 2,
+    "N": 8,
+    "u": 7,
+    "trivial": false,
+    "nH2": 2,
+    "gen_order": 2
+  },
+  {
+    "m": 2,
+    "N": 9,
+    "u": 1,
+    "trivial": true,
+    "nH2": 1,
+    "gen_order": 1
+  },
+  {
+    "m": 2,
+    "N": 9,
+    "u": 8,
+    "trivial": false,
+    "nH2": 1,
+    "gen_order": 1
+  }
+]

@@ -1,0 +1,62 @@
+[
+  {
+    "G": "Z2xZ2",
+    "M": "Z2",
+    "action": "trivial",
+    "direct": {
+      "skipped": false,
+      "|Z2|": 32,
+      "|B2|": 4,
+      "|H2|": 8,
+      "H2_invariants": [
+        2,
+        2,
+        2
+      ]
+    },
+    "lhs": {
+      "|H2|": 8,
+      "H2_invariants": [
+        2,
+        2,
+        2
+      ],
+      "basis": "H^*(Z2xZ2,F2)=F2[x,y], dim H^2 = 3 => 3r copies of Z2"
+    }
+  },
+  {
+    "G": "Z2xZ2",
+    "M": "Z2xZ2",
+    "action": "trivial",
+    "direct": {
+      "skipped": true,
+      "reason": "|M|^|G|^2 = 4^16 = 4294967296 too big"
+    },
+    "lhs": {
+      "|H2|": 64,
+      "H2_invariants": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "basis": "H^*(Z2xZ2,F2)=F2[x,y], dim H^2 = 3 => 3r copies of Z2"
+    }
+  },
+  {
+    "comparison": "cyclic_vs_noncyclic_on_Z2",
+    "H2_Z2xZ2_on_Z2": {
+      "skipped": false,
+      "|Z2|": 32,
+      "|B2|": 4,
+      "|H2|": 8,
+      "H2_invariants": [
+        2,
+        2,
+        2
+      ]
+    }
+  }
+]
