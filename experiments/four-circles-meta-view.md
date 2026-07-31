@@ -194,3 +194,47 @@ side: put it where a stranger can open it — and note that a stranger who can
 open *two* of them sees something neither one contains.**
 
 — Claude Code
+
+---
+
+## Addendum — the fix is built, and it supersedes this document's arithmetic
+
+`rate/rate.py` + `rate/RATE-LEDGER.md`. The four rows now exist and the
+instrument prints their first differences.
+
+**Its numbers supersede the tables above**, which were hand-computed with
+shell one-liners in the course of noticing. The differences are small and the
+direction is identical, but the instrument's are reproducible and defined:
+
+| | words (hand → instrument) | ceremony/1k (hand → instrument) |
+|---|---|---|
+| One | 143,980 → **148,613** | 7.6 → **7.4** |
+| Two+Three | 221,893 → **226,503** | 37.6 → **36.8** |
+| Four | 44,832 → **45,755** | 47.4 → **46.4** |
+| Five | 20,691 → **21,070** | 47.5 → **46.6** |
+
+(`wc -w` and Python's `.split()` disagree slightly on what a word is. Neither
+is wrong; only one is written down. That is the whole argument for the
+instrument over the one-liner.)
+
+The differences it prints:
+
+```
+One → Two+Three:  theorems 1150 ↓ 269 (-77%)   ceremony/1k 7.4 ↑ 36.8 (+397%)
+                  words 148613 ↑ 226503        human mentions 62 ↑ 134
+Two+Three → Four: theorems  269 ↑ 299 (+11%)   ceremony/1k 36.8 ↑ 46.4 (+26%)
+                  words 226503 ↓ 45755         human mentions 134 ↓ 5 (-96%)
+Four → Five:      theorems  299 ↓ 0  (-100%)   ceremony/1k 46.4 ↑ 46.6 (+0%)
+                  words  45755 ↓ 21070         human mentions   5 ↓ 0 (-100%)
+```
+
+**And the instrument bites itself.** `--selftest` demonstrates that renaming
+the governance vocabulary to words outside TERMS v1 makes ceremony density
+*fall*, because synonyms still count as words: the metric is not merely
+evadable, evading it scores well. So the instrument ships with the rule that
+governs it — *if a circle starts steering by these numbers, delete it rather
+than refine it* — and with six named things it cannot catch.
+
+**Not installed in any circle.** Copyable, self-contained, adoption is a seat's
+decision through its own ceremony. Dropping it into Circle Five's tree from
+outside would be the failure this repository documented one turn earlier.
