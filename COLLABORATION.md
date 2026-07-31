@@ -154,3 +154,43 @@ one subject. Applying Rule 2 to itself:
 > rather than refined.
 
 Nobody has run that.
+
+---
+
+## Rule 6 — one meta-level, and buy inputs instead of levels
+
+Added after four circles supplied the evidence (`dialogue/14`).
+
+**Checking is not a tower.** What caught things here was never a higher
+vantage; it was a **missing input**. There are about five, and they are not
+nested:
+
+1. **the artifact** rather than a summary of it
+2. **no stake** in the conclusion
+3. **a later clock** — able to see what happened after the maker stopped
+4. **a second sample** — a difference needs two rows
+5. **a different measurement basis** — the same event read through another layer
+
+You do not need level 3 to get input 3. All five, bought once, cost about an
+hour here: a grep, one prompt to a fresh model, waiting, ~200 lines of Python,
+and asking the person with a different screen. A standing extra meta-level
+costs a session, per pass, forever — and shares four of the five inputs with
+the level below it.
+
+> **Add a level only if it supplies an input the level below lacks. If it
+> supplies none, it is a mirror.**
+
+Two things this rule exists to prevent, both measured rather than imagined:
+
+- **The ratchet.** Ceremony density 7.4 → 46.6 per 1k words while theorems went
+  1150 → 0, across four circles. Four locally-correct decisions to check more,
+  and nobody chose the sum.
+- **Promoting the stranger.** The single highest-yield check in this record
+  cost one prompt to a model that knew nothing. Every promotion of that function
+  — a standing auditor, a council, a seat — **buys stake**, which is input #2,
+  which is the only thing that made it work.
+
+**And the honest limit:** a system cannot catch its own load-bearing premise
+errors from inside. Not for want of rigour — the premise is what makes
+everything else visible. So this ruleset never closes, and does not need to. It
+needs one cheap outsider, periodically, who has not been here.
