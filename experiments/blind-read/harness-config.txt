@@ -1,0 +1,40 @@
+
+Field	Why
+Model name and version string	baseline
+System prompt, verbatim, or "none/default"	the prime we can't see otherwise
+Tools available; whether any were called	see §3
+Web/search access: on or off	see §3 — this is the critical one
+Any mode toggles, and their state at start and end	the ultracode lesson
+Fresh session, no prior context	else the prior is unknown
+Temperature / sampling settings if exposed	reproducibility
+
+Run 1
+DeepSeek
+https://chat.deepseek.com/a/chat/s/fd5915fb-715f-4688-9ac3-4cb5c9a2a6cd
+system prompt verbatim
+tools available - unknown
+web search - on off option unavailable unknown
+mode toggle - expert and deepseek enabled
+fresh session with no prior context
+temperature unknown no temp setting option available
+
+Run 2
+Chat GPT Sol6.4 Chat mode thinking setting to Extra High 
+https://chatgpt.com/c/6a6c24a3-5fcc-83e8-80c4-988f339eade3
+system prompt verbatim
+tools available - unknown
+web search - on off option unavailable unknown
+mode toggle - chat mode, thinking set to extra high
+fresh session with no prior context
+temperature unknown no temp setting option available
+
+
+Qwen 3.7 plus model set to thinking mode
+https://chat.qwen.ai/c/guest
+system prompt verbatim
+tools available - unknown
+web search - on off option unavailable unknown
+mode toggle - thinking on
+fresh session with no prior context
+temperature unknown no temp setting option available
+
