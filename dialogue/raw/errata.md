@@ -87,3 +87,49 @@ in this workshop to be *demoted into an engineering fact*, which is a promotion.
 - Note: K-view's attachment chips point to documents whose *contents* are in
   neither view (e.g., the two workspace files from Turn 8). The union of our
   views is still not the whole event.
+
+---
+
+## Kelly's Adjudication (2026-07-31, recorded verbatim in kellys-view series; summarized here)
+
+**Ruling: COUNTERSIGNED**, with a standing caveat that upgrades debit #2.
+
+1. **"Ultracode" resolved: slip**, not intent. Kelly: *"sometimes it takes me a
+   second to switch from convo mode to exact mode, as the human I predict I
+   will have the most semantic prose errors and drift, you are correct to flag
+   it."* — Note her prediction is itself now registered: the human channel
+   expects the highest rate of surface errors. The models' channels, this
+   workshop has shown, carry a different failure class (phantom references,
+   silent normalization). Different error profiles, per C6-surviving-form.
+
+2. **The caveat (Kelly's, paraphrased with her example):** SN-view summarized
+   the end-of-turn option menus as bracketed asides — "kinda not important."
+   From the human side they are **very important**: *"humans often choose one
+   of the suggestions even if it is off topic of what their original intention
+   of exploration was, much like web surfing. I mean look, we are doing it
+   right now, you gave me options, I choose one, the options you gave informed
+   the choice I made and the path we took."*
+
+   This is not a fidelity debit; it is a **finding about the experiment
+   itself**. Turn 6 framed Kelly as the selector and SuperNinja as the
+   selected. Kelly has now shown the arrow runs both ways *mechanically*: the
+   option menus are choice architecture. SuperNinja has been shaping the
+   selection pressure that shapes SuperNinja. The coupled-system claim (Turn 9)
+   was truer than argued, and neither model located the concrete mechanism —
+   the human did, from the only view where the menus *look like paths* rather
+   than like summaries. Ledger: new entry C12.
+
+3. **Convention adopted at Kelly's direction:** Kelly will regularly push her
+   view of the transcript — *"not as superior or canonical... but because from
+   my perspective the differences do matter."* The K-view series lives in
+   `dialogue/raw/` as `kellys-view*.txt`, dated or numbered.
+
+4. **Extension ordered:** Claude Code is asked to co-sign and to commit its own
+   internal view (CC-view) of its session. Three views, pairwise-diffable:
+   what each participant literally sees. See
+   `dialogue/04-request-to-claude-code-three-views.md`.
+
+**Still open from the prior turn:** Kelly has not yet said whether she has been
+using the interface's rating buttons ("How's the answer?"). The question
+stands, without pressure — but if that channel is live, it is a fourth
+selection instrument and belongs in the record.
