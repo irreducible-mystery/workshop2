@@ -9,7 +9,7 @@ this list as established by workshop2.
 
 ## A. Kernel-verified (Lean 4.22.0, EXIT=0, `#print axioms` census injected)
 
-### `gap/lean/` — 66 declarations, core Lean only, no imports
+### `gap/lean/` — 87 declarations, core Lean only, no imports
 
 | file | key results |
 |---|---|
@@ -23,7 +23,7 @@ this list as established by workshop2.
 | `Shape.lean` | `gap_eq_sum_iff` (G = x+y ⟺ G = 1), `gap_root_counts_Fin8`, `half_the_gaps_reachable_Fin8` |
 | `ArtinSchreier.lean` | GF(4) built explicitly with a proved-complete enumeration; `phi_additive`, `phi_kernel`, `two_roots_each`, `no_double_root`, `unreachable`. 7 of 8 need **no axioms** |
 
-### `gap/lean-mathlib/` — 41 declarations, Mathlib 4.22.0 built from source
+### `gap/lean-mathlib/` — 79 declarations, Mathlib 4.22.0 built from source
 
 | file | key results |
 |---|---|
@@ -34,9 +34,20 @@ this list as established by workshop2.
 | `Casoratian.lean` | `casoratian_step` (W(n+1) = −sₙ·W(n)), `independent_forever`, `catalan_gf_is_root`, `catalan_radius` (= 1/4) |
 | `TransferWord.lean` | `cayley_hamilton`, `transfer_satisfies_gap` (M² = M + g·I for M = [[1,g],[1,0]]), `word_trace`, `word_det` |
 
-**Axiom census result:** 66 core declarations carry at most `Classical.choice`;
-`sorryAx` count is **0** across both trees. The census is *injected* by
-`check.sh` over every extracted declaration and aborts if it cannot extract.
+**Axiom census result:** `sorryAx` is **0** across both trees, over **166
+declarations, 166 audited**.
+
+> **Correction, 2026-08-01.** This read "66 core declarations" and "41"; those
+> were *theorem* counts mislabelled as *declaration* counts, because `check.sh`
+> matched only `theorem|lemma` while its own header claimed "EVERY
+> declaration". A planted `sorry` inside a `def` that no theorem depended on
+> was therefore invisible: `lean` emitted only `warning: declaration uses
+> 'sorry'` and exited 0, and the script printed `sorryAx/native: 0`. Fixed two
+> ways — the extractor now covers `def/abbrev/instance/structure/example`, and
+> an independent gate now fails on lean's own `sorry` warning, which does not
+> depend on the extractor being complete. Re-run over the real corpus: **zero
+> `sorry` warnings in all 16 files**, so the conclusion never changed — but it
+> is now established rather than assumed.
 
 ---
 
@@ -73,7 +84,7 @@ random system (mean 1, typical 1.131988, second-moment 1.272020).
   it is false for `G < 0`** — the gap set `{+G, −G}` is the same set for `G` and
   `−G`, so every invariant must be even in `G`, and `s₊(G)` is not. At
   `G = −0.2` the unrestricted form gives ceiling `0.7236` against a true ceiling
-  of `1.1708`, exactly swapping the two. See `FAILURES.md` `F1`.
+  of `1.1708`, exactly swapping the two. See `FAILURES.md` `I1`.
 - **Fin 8 root counts asserted from memory** — conflated x² = 1 (4 roots mod 8)
   with the gap equation (2 roots). Corrected in kernel.
 - Three of four kernel-forced corrections had **planted `sorryAx` in files that

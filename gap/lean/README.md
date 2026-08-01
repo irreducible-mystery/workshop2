@@ -170,7 +170,7 @@ Mathlib.
 > Lyapunov exponent — must be an **even function of `G`**, and `s₊(G)` is not
 > even. At `G = −0.2` the old statement gives ceiling `0.7236` when the true
 > ceiling is `1.1708`: the two formulas are exactly swapped. Caught by an
-> adversarial literature-triage agent, verified numerically, entered as `F1` in
+> adversarial literature-triage agent, verified numerically, entered as `I1` in
 > `../../FAILURES.md`. The symmetry check that would have caught it is one line. So is anything about `ℚ`, `ℝ`, `−1/4` as an actual number, the Catalan
 identity, and the Lyapunov results.
 

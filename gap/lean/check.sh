@@ -5,50 +5,52 @@
 # only the `#print axioms` lines the author happened to write, which covered
 # 45 of 66 declarations while the README claimed "every declaration". That
 # claim was false and a cold reader caught it. This version extracts every
-# theorem/lemma name and probes it, and ABORTS if it cannot.
+# declaration name and probes it, and ABORTS if it cannot.
+#
+# 2026-08-01: the version after THAT one still said "EVERY declaration" while
+# matching only `theorem|lemma`. A `sorry` inside a `def` that no theorem
+# depends on was therefore invisible: on a planted probe, `lean` emitted only
+# `warning: declaration uses 'sorry'` and exited 0, and this script printed
+# "1 declarations, 1 audited, sorryAx/native: 0". Two fixes below:
+#   (a) extract def/abbrev/instance/structure/example as well as theorem/lemma;
+#   (b) an independent GATE on lean's own "declaration uses 'sorry'" warning,
+#       which catches holes in anonymous declarations that have no name to probe.
+# (b) does not depend on (a) being complete, which is the point of having it.
 set -u
+# core Lean only: these files have no imports, so no LEAN_PATH is needed.
 command -v lean >/dev/null 2>&1 || { echo "no lean on PATH"; exit 2; }
 fail=0
 
-# Strip block and line comments BEFORE extracting names. Without this, prose
-# inside a comment such as "theorem on the semions, and the locus..." is read as
-# a declaration named `on`, the probe fails with `unknown constant`, and the
-# census aborts. Found on another party's real file, not on invented input.
-strip_comments() {
-    awk '
-      { line=$0
-        while (1) {
-          if (inblk) { i=index(line,"-/"); if (i==0) { line=""; break } else { line=substr(line,i+2); inblk=0 } }
-          else { i=index(line,"/-"); if (i==0) break; else { pre=substr(line,1,i-1); rest=substr(line,i+2)
-                 j=index(rest,"-/"); if (j==0) { line=pre; inblk=1; break } else { line=pre substr(rest,j+2) } } } }
-        sub(/--.*/,"",line); print line }' "$1"
-}
-
 extract() {
-    strip_comments "$1" | awk '
+    awk '
       /^[[:space:]]*namespace[[:space:]]+/ { ns[++d]=$2; next }
       /^[[:space:]]*end[[:space:]]+/       { if (d>0 && $2==ns[d]) d--; next }
       {
         line=$0
         sub(/^[[:space:]]*/,"",line)
         sub(/^@\[[^]]*\][[:space:]]*/,"",line)
-        sub(/^(private|protected|noncomputable)[[:space:]]+/,"",line)
-        if (line ~ /^(theorem|lemma)[[:space:]]+[A-Za-z_]/) {
+        while (line ~ /^(private|protected|noncomputable|partial|unsafe)[[:space:]]+/)
+          sub(/^(private|protected|noncomputable|partial|unsafe)[[:space:]]+/,"",line)
+        if (line ~ /^(theorem|lemma|def|abbrev|instance|structure|example)[[:space:]]+[A-Za-z_]/) {
           n=line; sub(/^[a-z]+[[:space:]]+/,"",n); sub(/[^A-Za-z_0-9.'"'"'].*/,"",n)
           if (n=="") next
           p=""; for (i=1;i<=d;i++) p = p ns[i] "."
           print p n
         }
-      }'
+      }' "$1"
 }
 
 echo "=== compile ==="
 for f in *.lean; do
     [ -e "$f" ] || continue
-    lean "$f" >/dev/null 2>&1
+    out=$(lean "$f" 2>&1)
     rc=$?
-    printf '  %-24s EXIT=%s\n' "$f" "$rc"
+    # GATE (b): lean exits 0 on `sorry` -- it is only a warning. Catch it here,
+    # independently of whether the name-based census below reaches the decl.
+    sw=$(printf '%s' "$out" | grep -c "uses 'sorry'")
+    printf '  %-24s EXIT=%s  sorry-warnings=%s\n' "$f" "$rc" "$sw"
     [ "$rc" -eq 0 ] || fail=1
+    [ "$sw" -eq 0 ] || { echo "    ABORT: $f contains a declaration using 'sorry'"; fail=1; }
 done
 
 echo

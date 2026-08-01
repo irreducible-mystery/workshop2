@@ -1,6 +1,6 @@
 # `gap/lean-mathlib/` — the half that needed real numbers
 
-Forty-one theorems that could not be stated in core Lean, because they are about
+Seventy-nine declarations (forty-one of them theorems in the original count) that could not be stated in core Lean, because they are about
 `ℝ`, `ℂ`, `√5`, and **−1/4 as an actual number** rather than as an obstruction.
 
 **Census.** `propext`, `Classical.choice`, `Quot.sound` throughout — the standard

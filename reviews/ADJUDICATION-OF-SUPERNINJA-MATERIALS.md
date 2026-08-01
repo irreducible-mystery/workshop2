@@ -153,3 +153,131 @@ are a correct, checkable statement of the object. Let them stand alone under
 their own name.
 
 ---
+
+## 2. `lean_mathematical_summary.md`
+
+*Done by hand rather than by agent: three of the four reviewing agents died
+without producing output, and this one is a mechanical diff that a script settles
+in two minutes. Extractor with full comment stripping (line, block, nested),
+self-tested against prose that looks like a declaration before being trusted.*
+
+### It invents nothing
+
+**Zero phantoms across all 15 files.** Not one declaration is listed that does
+not exist. Given how these summaries usually fail, that is the headline and it
+should be said first: the document under-reports, it does not fabricate. Every
+name in it is real, every name is spelled correctly, and the characterisations
+attached to the theorems it did find are accurate.
+
+It is also right about the two largest files. `TransferWord.lean` (20) and
+`Characteristic.lean` (17) are complete, as are `ArtinSchreier.lean`,
+`Ceiling.lean`, `GeneralCeiling.lean`, `Reflexive.lean` and `Schedules.lean` —
+7 of 15 files perfect.
+
+### The diff
+
+| file | summary | actual | phantoms | dropped |
+|---|---:|---:|---:|---|
+| ArtinSchreier | 12 | 12 | 0 | — |
+| Branch | 9 | 10 | 0 | `disc_is_squared_gap` |
+| Casoratian | 5 | 8 | 0 | `casoratian_step`, `casoratian_unit`, `independent_forever` |
+| Ceiling | 13 | 13 | 0 | — |
+| Characteristic | 17 | 17 | 0 | — |
+| GeneralCeiling | 7 | 7 | 0 | — |
+| Golden | 9 | 10 | 0 | `nilpotent_forces_branch` |
+| Modulus | 6 | 8 | 0 | `c_sum`, `c_prod` |
+| Quadratic | 8 | 10 | 0 | `imaginary_forced`, `integral_solutions_are_real` |
+| Reflexive | 6 | 6 | 0 | — |
+| Schedules | 11 | 11 | 0 | — |
+| Shape | 8 | 9 | 0 | `gap_eq_sum_iff` |
+| TransferWord | 20 | 20 | 0 | — |
+| Tropical | 3 | 5 | 0 | `tropical_unique`, `tropical_no_second_root` |
+| Vieta | 1 | 4 | 0 | `sum_of_roots`, `product_of_roots`, `discriminant_is_gap` |
+| **total** | **135** | **150** | **0** | **15 dropped = 10.0%** |
+
+### What it drops is not random
+
+The drops are not noise — they are disproportionately **the headline theorems**:
+
+- `Vieta.lean` loses **all three** of its results. The file that establishes
+  `x+y = 1` and `x·y = −G` — the two invariants the whole object is built on —
+  is represented by a single declaration.
+- `Modulus.lean` loses `c_sum` and `c_prod`, which are the *only* place the
+  golden identity `φ + (−1/φ) = 1`, `φ · (−1/φ) = −1` is proved over ℂ. A reader
+  of the summary would conclude that identity is unproved here. It is proved.
+- `Golden.lean` loses `nilpotent_forces_branch` — the iff, and the strongest
+  statement in the file.
+- `Shape.lean` loses `gap_eq_sum_iff`, the reflexive-ladder result.
+- `Tropical.lean` loses `tropical_unique`, which is the entire point of the file.
+
+Positionally the drops sit at indices 0, 1, 2, 3, 4, 7, 8, 9 across the various
+files — so no simple "misses the first" or "stops at a blank line" rule fits. The
+common feature is more likely a multi-line statement or a preceding docstring
+than a positional bug, but **I could not reproduce the extractor from the output
+alone and am not going to guess at its source.** What is certain is the effect.
+
+### Two files it describes that do not exist
+
+The summary covers **35 files**. Fifteen are real. **Twenty are not present
+anywhere reachable** — `CategoryGap`, `HomotopyGap` (×5 variants),
+`ThermodynamicGap` (×4), `ToposGap`, `ModelGap`, `NoncommutativeGap`,
+`CrossFrameworkTheorems`, `ShadowCastingObject`, `ShadowPatternTheorems`,
+`ExplicitShadowCasting`, `InfiniteAscent`, `SuperCriticalPoint`,
+`CategoryGap_Basic` — claiming **272 declarations** between them. Those are the
+files the "Six Framework Convergence" rests on. This is bucket **[O]**: they may
+exist somewhere we cannot see. But 272 of the 407 declarations the summary
+describes — **two thirds of it** — cannot be checked from here.
+
+It also omits `Cone.lean` entirely, which is fair: that file was written after
+the summary.
+
+### Verdict
+
+Safe to circulate as *a partial index of names*. **Not safe to circulate as a
+description of the corpus**, for one specific reason: it drops
+`sum_of_roots`, `product_of_roots` and `discriminant_is_gap` — so a reader
+using it to decide what has been proved would conclude the two Vieta invariants
+are unproved, when they are the most securely proved things in the tree. The fix
+is mechanical and worth doing, because the underlying tool is honest: it
+under-reports by 10% and fabricates nothing, which is the right direction to
+fail in.
+
+---
+
+## 3. A defect this diff turned up in *my own* instrument
+
+Checking the counts above against `check.sh` produced a mismatch I could not
+explain, and chasing it found a real hole. Recorded here because the SuperNinja
+materials were being judged against these numbers.
+
+`check.sh` matched only `theorem|lemma` while its header claimed it censused
+"EVERY declaration". Planted probe:
+
+```
+file contains:   noncomputable def orphan : ℝ := sorry
+lean says:       warning: declaration uses 'sorry'          EXIT=0
+check.sh said:   1 declarations, 1 audited, sorryAx: 0      EXIT=0
+```
+
+A `sorry` inside a `def` that no theorem transitively depends on was invisible,
+and `lean` itself exits 0 on `sorry` because it is only a *warning*. Two fixes,
+deliberately independent:
+
+1. the extractor now covers `def/abbrev/instance/structure/example`;
+2. a separate gate now fails on lean's own `uses 'sorry'` warning — which does
+   **not** depend on the extractor being complete, and catches anonymous
+   declarations that have no name to probe.
+
+Both fire on the planted probe now. Re-run over the real corpus: **zero `sorry`
+warnings in all 16 files**, so nothing was ever hiding. But the published counts
+were wrong — they were theorem counts labelled as declaration counts:
+
+| | published | actual |
+|---|---:|---:|
+| `gap/lean/` | 66 | **87** |
+| `gap/lean-mathlib/` | 41 (then 53) | **79** |
+| total | 107 | **166 declarations, 166 audited, `sorryAx` 0** |
+
+The conclusion never moved. What changed is that it is now established instead
+of assumed — which is the whole distinction this workshop exists to maintain,
+and I was on the wrong side of it while grading someone else's counts.
