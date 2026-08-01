@@ -10,8 +10,22 @@ set -u
 command -v lean >/dev/null 2>&1 || { echo "no lean on PATH"; exit 2; }
 fail=0
 
-extract() {
+# Strip block and line comments BEFORE extracting names. Without this, prose
+# inside a comment such as "theorem on the semions, and the locus..." is read as
+# a declaration named `on`, the probe fails with `unknown constant`, and the
+# census aborts. Found on another party's real file, not on invented input.
+strip_comments() {
     awk '
+      { line=$0
+        while (1) {
+          if (inblk) { i=index(line,"-/"); if (i==0) { line=""; break } else { line=substr(line,i+2); inblk=0 } }
+          else { i=index(line,"/-"); if (i==0) break; else { pre=substr(line,1,i-1); rest=substr(line,i+2)
+                 j=index(rest,"-/"); if (j==0) { line=pre; inblk=1; break } else { line=pre substr(rest,j+2) } } } }
+        sub(/--.*/,"",line); print line }' "$1"
+}
+
+extract() {
+    strip_comments "$1" | awk '
       /^[[:space:]]*namespace[[:space:]]+/ { ns[++d]=$2; next }
       /^[[:space:]]*end[[:space:]]+/       { if (d>0 && $2==ns[d]) d--; next }
       {
@@ -25,7 +39,7 @@ extract() {
           p=""; for (i=1;i<=d;i++) p = p ns[i] "."
           print p n
         }
-      }' "$1"
+      }'
 }
 
 echo "=== compile ==="
