@@ -22,7 +22,7 @@ full canon, and all three alternated between rounds producing **kernel-checked
 Lean** and rounds producing **governance prose**. So the canon is held constant
 and only the terminal condition varies. **Within-body, not across.**
 
-**Mechanical classifier, fixed before looking:** `theorem` occurrences per 1,000
+**Mechanical test, fixed before looking:** `theorem` occurrences per 1,000
 words in a round's own letters. A round doing kernel work names theorems; a
 round doing governance does not. No judgement about which round "counts."
 

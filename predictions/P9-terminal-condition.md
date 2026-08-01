@@ -10,7 +10,7 @@ inherited, and all three produced kernel-checked Lean in some rounds and pure
 governance prose in others. **The comparison is within-body, so the canon is
 held constant and only the terminal condition varies.**
 
-**Mechanical classifier, chosen before looking:** theorem-mention density
+**Mechanical test, chosen before looking:** theorem-mention density
 (`theorem` occurrences per 1,000 words) in a round's own letters. A round doing
 kernel work names theorems; a round doing governance does not. No judgement call
 about which round "counts."

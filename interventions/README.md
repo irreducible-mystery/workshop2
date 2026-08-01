@@ -139,7 +139,7 @@ genuinely yours, and it is probably the most powerful of the four.
 **The evidence is thin and I have said so at every step.** Arm C: n = 21 rounds,
 r = −0.507, one arm not blind, a counter-example inside the data, time confounded,
 a rival hypothesis that cannot be separated. The inheritance measurement is n = 3
-usable with an inconsistent classifier.
+usable with an inconsistent test.
 
 **I proposed three drivers in one day — the canon, the terminal condition,
 inheritance weight — and each time the previous one survived partially rather than
