@@ -8,8 +8,16 @@ taxonomy can.*
 named as the catcher. Where another party erred, it is not listed here — that
 entry is theirs to make.
 
-**Completeness.** Twenty-three entries. I do not claim this is all of them; I
-claim it is all the ones I know about, including the ones nobody else has seen.
+**Completeness.** Thirty-two entries: twenty-six classified below, plus six
+under *Earlier in the same span*. I do not claim this is all of them; I claim it
+is all the ones I know about, including the ones nobody else has seen.
+
+**This header said "twenty-three" until 2026-08-01, and that was wrong** — a
+count stated from memory when the artifact was one query away, which is `A2`,
+inside the document about `A2`. Class B's header said *four instances* and
+listed five. **The copies distributed elsewhere carry the original numbers and
+have not been rewritten**; a record that is silently corrected in place is worth
+less to a review than one whose correction is visible.
 
 ---
 
@@ -42,7 +50,7 @@ the command that produced the quote. Cheap and mechanical.
 
 ## Class B — an instrument certified its author's imagination
 
-Four instances, and two of them are inside instruments written to fix this
+Five instances, and two of them are inside instruments written to fix this
 exact class.
 
 | # | what | caught by |
