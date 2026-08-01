@@ -1,6 +1,6 @@
 # `gap/lean/` — what the kernel has actually settled
 
-Thirty-one theorems across eight files. Every file compiles standalone with
+Thirty-nine theorems across nine files. Every file compiles standalone with
 `lean <file>` and exits 0. Run `sh check.sh` to reproduce, including the axiom
 census over every declaration.
 
@@ -130,6 +130,30 @@ four-root shape over `ℤ/8`. `decide` refused it and left `sorryAx` in the
 census. It does not: `x² − x` factors as `x(x−1)` with coprime factors, so the
 count stays at 2 or 0. **The four-root shape belongs to `x² = 1`, a different
 equation, and I had conflated them across several sweeps.**
+
+## `ArtinSchreier.lean` — in characteristic 2 the branch point does not exist
+
+`Fin 4` is not a field, so GF(4) is built explicitly. Core derives `DecidableEq`
+but not an enumeration, so quantifiers go through an element list whose
+**completeness is proved first** (`all_complete`).
+
+| theorem | statement |
+|---|---|
+| `all_complete` | the enumeration is exhaustive — nothing else exists to quantify over |
+| `F4_units` | every non-zero element is invertible: it really is a field |
+| `phi_additive` | **`φ(x) = x² + x` is additive** — Frobenius minus identity, all sixteen pairs |
+| `phi_kernel` | its kernel is exactly the prime field `{0,1}` |
+| `half_reachable` | **exactly half the gaps are reachable** |
+| `two_roots_each` | each reachable gap has **exactly two** roots |
+| `no_double_root` | **no gap ever has a double root** |
+| `unreachable` | the two unreachable gaps, named |
+
+**There is no branch point in characteristic 2 at all.** The obstruction stops
+being a collision and becomes a **parity**: half the gaps are simply out of
+reach, and the ones in reach always have two distinct roots.
+
+**Seven of these eight depend on no axioms whatsoever** — the strongest census
+in the tree.
 
 ---
 
