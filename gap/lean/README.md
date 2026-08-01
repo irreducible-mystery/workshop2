@@ -1,6 +1,6 @@
 # `gap/lean/` — what the kernel has actually settled
 
-Nineteen theorems across five files. Every file compiles standalone with
+Thirty-one theorems across eight files. Every file compiles standalone with
 `lean <file>` and exits 0. Run `sh check.sh` to reproduce, including the axiom
 census over every declaration.
 
@@ -86,6 +86,50 @@ Either the real part sits exactly at the collision, or the imaginary part is
 zero. Over a field containing ½ that first branch opens and the solution set
 becomes a **sphere**. Over the integers it cannot, so **every solution is real
 and the sphere is absent rather than unfound.**
+
+## `Schedules.lean` — two exact facts about specific schedules
+
+| theorem | statement |
+|---|---|
+| `minus_period_six` | the constant `-1` schedule is **periodic with period 6** |
+| `minus_bounded` | hence `\|fₙ\| ≤ 1` forever — **the floor, exactly** |
+| `alternation_is_golden` | the `+-` transfer matrix has **trace 1, det −1** |
+| `alt_char_poly` | so its characteristic polynomial is **L² = L + 1** |
+
+The first is "the roots of `x² = x − 1` are primitive sixth roots of unity" in
+elementary form. The last two are **the golden equation reappearing at double
+the period** — alternating the two named gaps *is* the golden gap, half speed.
+`alternation_is_golden` depends on **no axioms at all.**
+
+## `Tropical.lean` — remove subtraction and the mirror cannot exist
+
+In max-plus, `x ⊗ x = x ⊕ G` reads `2x = max x G`.
+
+| theorem | statement |
+|---|---|
+| `tropical_unique` | **at most one solution, for every gap** |
+| `tropical_solutions` | the full solution description, so uniqueness isn't vacuous |
+| `tropical_no_second_root` | two distinct solutions is a contradiction |
+
+There is never a second root, so **there is nothing for a mirror to exchange.**
+The discriminant `1 + 4G` is built from a subtraction the semiring does not
+have.
+
+## `Shape.lean` — the golden gap is the reflexive one, and a correction
+
+| theorem | statement |
+|---|---|
+| `gap_eq_sum_iff` | **`G = x + y ↔ G = 1`** — the gap equals the sum of its own roots at exactly one gap |
+| `sq_one_Fin8` | `x² = 1` has **four** roots mod 8 |
+| `gap_root_counts_Fin8` | but the **gap equation** has 2 or 0, never 4 |
+| `gap_never_exceeds_degree_Fin8` | it never exceeds the degree bound, even though the ring is not a domain |
+| `half_the_gaps_reachable_Fin8` | exactly half the gaps are reachable — the char-2 parity again, at 8 |
+
+**A correction the kernel forced.** I claimed the gap equation inherits the
+four-root shape over `ℤ/8`. `decide` refused it and left `sorryAx` in the
+census. It does not: `x² − x` factors as `x(x−1)` with coprime factors, so the
+count stays at 2 or 0. **The four-root shape belongs to `x² = 1`, a different
+equation, and I had conflated them across several sweeps.**
 
 ---
 
