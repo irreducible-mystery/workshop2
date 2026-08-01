@@ -1,8 +1,45 @@
 # The branch point is the collapse of the common invariant cone
 
-*Found while playing, 2026-08-01. Kernel-verified. This is the one thing in the
-sweep that I think has actual content, and it was found by trying to break a
-result rather than by extending one.*
+*Found while playing, 2026-08-01. Kernel-verified.*
+
+---
+
+> ## Read this first — two corrections, added the same day
+>
+> **1. This is a known technique, not a discovery.** The cone argument below is
+> an instance of the **antinorm** method of Guglielmi & Protasov, *Exact
+> computation of joint spectral characteristics of linear operators*, Found.
+> Comput. Math. 13 (2013), and *An antinorm theory for sets of matrices*, Lin.
+> Alg. Appl. (2021): for a family sharing an invariant cone, antinorms stand to
+> the lower spectral radius as norms do to the joint spectral radius. The linear
+> functional used below is a degenerate extremal antinorm on `K(α)`. An
+> independent literature triage located this within one session and reproduced
+> both halves of the growth result in under ten lines each. I did not know the
+> reference when I wrote this file. **The result is true and kernel-verified;
+> it is not new.**
+>
+> **2. The claim this file was built on was false outside `a > 0`.** The stated
+> ceiling/floor formulas `s₊(G)`, `|s₊(−G)|` are wrong for every `G < 0` —
+> see the symmetry note below and `FAILURES.md` `I1`. This file happens to be
+> safe because it fixes `a > 0` throughout, and `Cone.lean` because it
+> hypothesises `0 ≤ a`. That was expositional convenience, not care.
+>
+> Also worth recording: the object itself is published and named. `x² = x + G`
+> is **de Spinadel's second metallic-means family** (`x² − x − n = 0`). The
+> full citation table for every result in this sweep is in `NOVELTY.md`.
+
+---
+
+## The symmetry that was missed
+
+Before anything else, the check that should have come first:
+
+**The set `{T(+a), T(−a)}` is unchanged by `a ↦ −a`.** It is literally the same
+two matrices. Therefore *every* quantity computed from the family — joint
+spectral radius, subradius, Lyapunov exponent — is an **even function of `a`**,
+before any computation is done. `s₊(a)` is not even. So the unrestricted claim
+was impossible on its face, and one line of thought establishes that without
+evaluating anything. Everything below is stated for `a > 0`, where it holds.
 
 ---
 
@@ -131,6 +168,27 @@ formalised. The ceiling half is separately proved in `GeneralCeiling.lean`
 (`const_attains`). The floor half below 1/4 is **computed to length 18 in exact
 arithmetic and not proved.**
 
-Standing caveat, unchanged: the cone geometry is elementary and someone has
-almost certainly written it down. It is being checked against the literature.
-The claim here is that it is *true* and *kernel-verified*, not that it is new.
+## The literature verdict
+
+The caveat this file originally closed with — "the cone geometry is elementary
+and someone has almost certainly written it down, it is being checked" — came
+back confirmed within hours. It is written down. Guglielmi–Protasov antinorms,
+cited at the top. Both halves of the growth statement are short consequences of
+standard machinery: the ceiling from entrywise domination by the nonnegative
+matrix `T(a)` plus monotonicity of the spectral radius on nonnegative matrices;
+the floor from `ρ ≥ √|det|` above the branch point and from the cone below it.
+
+The honest position on this file, then:
+
+- **True:** yes, and `sorryAx` 0 over 12 declarations.
+- **Correctly attributed:** now.
+- **New:** no.
+- **Worth keeping:** yes — because the *specific* statement it proves,
+  `admissible_iff_between_roots`, says the cone-slope interval **is** the root
+  interval and collapses exactly at the branch point. That is a clean way to see
+  why 1/4 governs a spectral question, and I have not found it phrased that way.
+  But it is a rephrasing of the discriminant condition, and it should be
+  presented as exposition with citations, not as a finding.
+
+For context on how little of the surrounding sweep is novel, `NOVELTY.md` has
+the full triage: essentially all of it is textbook, with references.

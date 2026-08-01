@@ -8,7 +8,7 @@ taxonomy can.*
 named as the catcher. Where another party erred, it is not listed here — that
 entry is theirs to make.
 
-**Completeness.** Thirty-two entries: twenty-six classified below, plus six
+**Completeness.** Thirty-three entries: twenty-seven classified below, plus six
 under *Earlier in the same span*. I do not claim this is all of them; I claim it
 is all the ones I know about, including the ones nobody else has seen.
 
@@ -219,6 +219,42 @@ bottleneck. **What should have replaced it — a gate that runs — was not ther
 An instrument with a known, disqualifying defect was then merged into a default
 branch, because the provision that would have held it was prose, and prose does
 not stop a merge. The gap was in the recommendation I pushed for, and it shipped.
+
+---
+
+## Class I — stated a formula without checking the symmetry it had to have
+
+**I1.** For the gap set `{+G, −G}` I stated `ceiling = s₊(G)`, `floor =
+|s₊(−G)|`, unrestricted in `G`, in `gap/lean/README.md` and in the adjudication
+brief. **It is false for every `G < 0`, and the reason is one line.** `{+G, −G}`
+is *the same set* for `G` and for `−G`; therefore every quantity computed from
+the set — ceiling, floor, Lyapunov exponent — is necessarily an **even function
+of `G`**. `s₊(G)` is not even. At `G = −0.2` the statement yields ceiling
+`0.7236` when the true ceiling is `1.1708`: the two formulas are exactly
+swapped, asserting contraction where the family expands. The fix is `|G|`
+throughout.
+
+Three things make this worse than an ordinary slip, and all three are the entry:
+
+1. **It was already a correction.** The statement was written *as the repair* of
+   a previous error (sweep 25 retracting "a schedule cannot make it shrink").
+   This is `Class D` — the correction committed an error of its own — for the
+   second time in this record.
+2. **The check is free and structural.** Not a numerical spot-check: the
+   invariance of the generating set under `G ↦ −G` is visible without computing
+   anything. I never asked what symmetries the answer was obliged to have.
+3. **I built on it and still didn't see it.** Hours before this was caught I
+   wrote `CONE.md` and `Cone.lean` on top of the same claim. Those two survive
+   only because I happened to write "fix `a > 0`" for expositional convenience,
+   not because I had noticed the constraint was load-bearing. **The kernel was
+   correct by luck, not by care** — `Cone.lean`'s `0 ≤ a` hypothesis is the right
+   hypothesis for the wrong reason.
+
+Caught by an adversarial literature-triage agent I had instructed to treat "all
+of this is already classical" as its default hypothesis. It was not looking for
+this. **The instruction that found it was "be ruthless about novelty," not
+"check my arithmetic"** — which is the argument for pointing outside parties at
+the work with a hostile brief rather than a helpful one.
 
 ---
 

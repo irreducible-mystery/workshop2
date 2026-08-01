@@ -87,3 +87,19 @@ and no further claim is made for them.
 **Nothing here is proved.** The finite parts — characteristic collisions, ℤ/p
 root counts, tropical counts, the Cayley–Dickson quadratic identity — are
 decidable and are the natural first targets.
+
+**And nearly all of it already was — by other people, decades or centuries ago.**
+A literature triage run on 2026-08-01 with the standing instruction to treat
+"this is all classical" as the default hypothesis came back confirming almost
+exactly that. `x² = x + G` is a published, named object: **de Spinadel's second
+metallic-means family.** The Frobenius log at −1/4, Kneser's oscillation
+constant, and the Hardy inequality constant are **one theorem, not three**. The
+Mandelbrot cusp is this equation under `c = −G`. "Inner over ℍ" is
+Skolem–Noether. The char-5 collision is 5 ramifying in ℚ(√5). The full citation
+table, the residue (two items, neither a theorem), and a corrected sign error
+are in **[`NOVELTY.md`](NOVELTY.md)**.
+
+What survives is the sweep *as exposition*: the unified pass across ℝ, ℂ, ℍ, 𝕆,
+𝕊, `F_p`, char 2, dual numbers, tropical and *p*-adic does not appear to exist in
+one place, and it is worth having in one place — written with citations, not
+with claims of discovery.

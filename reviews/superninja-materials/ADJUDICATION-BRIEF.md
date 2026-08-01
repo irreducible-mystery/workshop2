@@ -68,7 +68,12 @@ random system (mean 1, typical 1.131988, second-moment 1.272020).
 - **"The ceiling is the root at max\|G\|"** — false; workshop2's own row refuted
   it (sweep 70).
 - **"A schedule cannot make it shrink"** — false. Correct statement:
-  ceiling = s₊(G), floor = \|s₊(−G)\| (sweep 25).
+  ceiling = s₊(\|G\|), floor = \|s₊(−\|G\|)\| (sweep 25). **This correction was
+  itself stated without the absolute values until 2026-08-01, and in that form
+  it is false for `G < 0`** — the gap set `{+G, −G}` is the same set for `G` and
+  `−G`, so every invariant must be even in `G`, and `s₊(G)` is not. At
+  `G = −0.2` the unrestricted form gives ceiling `0.7236` against a true ceiling
+  of `1.1708`, exactly swapping the two. See `FAILURES.md` `F1`.
 - **Fin 8 root counts asserted from memory** — conflated x² = 1 (4 roots mod 8)
   with the gap equation (2 roots). Corrected in kernel.
 - Three of four kernel-forced corrections had **planted `sorryAx` in files that
