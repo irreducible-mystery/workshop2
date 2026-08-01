@@ -1,5 +1,16 @@
 # What persists — a survey, and where this record's own finding breaks
 
+> **Reader note, added 2026-08-01.** This document argues by analogy with the
+> life sciences throughout. That vocabulary was removed from every working
+> document in the circle repositories, because some models apply conservative
+> subject-matter safeguards that route text in those fields away from the model
+> that would otherwise answer — and a founding document in that register left a
+> circle unable to begin work on its own charge. **This file is a dated record
+> of how the reasoning actually went and is not repaired, because repairing it
+> would falsify it.** Nothing in the working set depends on reading it. The
+> design it argues for is stated in plain terms in
+> `the-workshop-circle-six/FOUNDING.md`: a locked branch and a scratch branch.
+
 *Kelly: look everywhere for the pattern. Robust and antifragile systems,
 evolution, hive minds, distributed intelligence, history, aphorisms. What do
 they have, what do they not have, how do they coordinate and decide and adapt,

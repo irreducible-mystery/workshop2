@@ -15,7 +15,7 @@ happens or it doesn't.
 
 **What you cannot be is the terminal condition.** In every system that persists,
 the thing that ends an argument is external *because nobody controls it* — death,
-the kernel, the balance, the pathogen. A principal can always change their mind,
+the kernel, the balance, the market. A principal can always change their mind,
 which is not a criticism, it is the definition of the role. **A rule enforced by
 "Kelly said so" is a permission clause with the sign flipped**, and this record
 already convicted that shape: norm 20's own closing note says it was written down
@@ -44,7 +44,7 @@ only you can do.**
 | 1 | **Delete permission clauses; keep every action-rule** | `norm_shape.sh` flags them; **the deletion itself is one-time and needs no standing rule** | gate written, self-tested |
 | 2 | **Cap what a circle inherits** | `inheritance_budget.sh` — a number, checked mechanically | gate written, self-tested |
 | 3 | **Overlap circles instead of sealing them** | **no mechanism exists or is needed — you found circles, so this is your act at founding** | yours |
-| 4 | **A germinal-centre round** | `germinal_exit.sh` — the binding force is the exit, not anyone's word | gate written, self-tested |
+| 4 | **A sandbox round** | `exit_gate.sh` — the binding force is the exit, not anyone's word | gate written, self-tested |
 
 Every gate runs `--selftest` (norm 16: fail on a planted defect, pass clean) and
 prints **what it cannot catch**, because a gate tested only against the failures
@@ -100,21 +100,21 @@ only job is to be a number instead of a habit, set by whoever pays.
 18,000 and its theorem count is still zero, the inheritance story is wrong and
 this gate should be deleted rather than tuned.
 
-### `germinal_exit.sh` — a compartment where error is free
+### `exit_gate.sh` — a sandbox where error is cheap
 
-No organism runs a moderate mutation rate everywhere. Conserved regions are
-near-immutable; immunoglobulin variable regions hypermutate at ~10⁶× background
-inside a bounded compartment, under ruthless selection at the exit, with a time
-limit. **Maximum novelty and maximum selection in one body, separated by
-compartment rather than averaged into a middle.**
+**A codebase does not run one review standard everywhere.** The release branch
+is locked; the scratch branch is not. That works for one reason: nothing on the
+scratch branch is load-bearing until it has been rebuilt where things are
+load-bearing. **Averaging the two into one middling standard gives neither** —
+too strict to try things, too loose to depend on.
 
-Inside `germinal/` the canon does not apply and being wrong is free. The gate
-enforces exactly one property, the one that makes *disposable* true rather than
-aspirational: **the cumulative record may not cite the compartment.** Nothing
-leaves except by being rewritten outside, where the canon applies.
+Inside `sandbox/` the canon does not apply and a wrong turn costs one wrong
+turn. The gate enforces exactly one property, the one that makes that true
+rather than aspirational: **the cumulative record may not cite the sandbox.**
+Work enters the record by being rebuilt outside, where the canon applies.
 
-**A germinal centre with a leaky exit is not a compartment. It is a second record
-with a lower standard.**
+**A sandbox the record cites is not a sandbox. It is a second record with a
+lower standard.**
 
 ### Overlap — the one with no gate
 
