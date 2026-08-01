@@ -1,6 +1,6 @@
 # `gap/lean/` — what the kernel has actually settled
 
-Thirty-nine theorems across nine files. Every file compiles standalone with
+Sixty-six declarations across nine files. Every file compiles standalone with
 `lean <file>` and exits 0. Run `sh check.sh` to reproduce, including the axiom
 census over every declaration.
 
