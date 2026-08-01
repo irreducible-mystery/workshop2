@@ -1,0 +1,922 @@
+{
+  "thread1": {
+    "sufficiency": [
+      {
+        "module": "Z2 x Z2",
+        "u": "swap",
+        "H2_order": 1,
+        "collapses": true,
+        "norm_surjects_fixed": true
+      },
+      {
+        "module": "Z4 x Z4",
+        "u": "swap",
+        "H2_order": 1,
+        "collapses": true,
+        "norm_surjects_fixed": true
+      },
+      {
+        "module": "Z8 x Z8",
+        "u": "swap",
+        "H2_order": 1,
+        "collapses": true,
+        "norm_surjects_fixed": true
+      }
+    ],
+    "necessity": [
+      {
+        "module": "Z2",
+        "n_involutions": 1,
+        "H2_orders_seen": [
+          2
+        ],
+        "min_H2_order": 2,
+        "collapses_via_some_u": false
+      },
+      {
+        "module": "Z4",
+        "n_involutions": 2,
+        "H2_orders_seen": [
+          2
+        ],
+        "min_H2_order": 2,
+        "collapses_via_some_u": false
+      },
+      {
+        "module": "Z8",
+        "n_involutions": 4,
+        "H2_orders_seen": [
+          1,
+          2
+        ],
+        "min_H2_order": 1,
+        "collapses_via_some_u": true
+      }
+    ],
+    "exhaustive_sweep": {
+      "rows": [
+        {
+          "orders": [
+            2
+          ],
+          "even_exponents": [
+            1
+          ],
+          "n_involutions": 1,
+          "min_H2_order": 2,
+          "observed_collapse": false,
+          "P3": false,
+          "sec9_deep": false,
+          "P3_or_deep": false,
+          "P_partition": false
+        },
+        {
+          "orders": [
+            4
+          ],
+          "even_exponents": [
+            2
+          ],
+          "n_involutions": 2,
+          "min_H2_order": 2,
+          "observed_collapse": false,
+          "P3": false,
+          "sec9_deep": false,
+          "P3_or_deep": false,
+          "P_partition": false
+        },
+        {
+          "orders": [
+            8
+          ],
+          "even_exponents": [
+            3
+          ],
+          "n_involutions": 4,
+          "min_H2_order": 1,
+          "observed_collapse": true,
+          "P3": false,
+          "sec9_deep": true,
+          "P3_or_deep": true,
+          "P_partition": true
+        },
+        {
+          "orders": [
+            16
+          ],
+          "even_exponents": [
+            4
+          ],
+          "n_involutions": 4,
+          "min_H2_order": 1,
+          "observed_collapse": true,
+          "P3": false,
+          "sec9_deep": true,
+          "P3_or_deep": true,
+          "P_partition": true
+        },
+        {
+          "orders": [
+            2,
+            2
+          ],
+          "even_exponents": [
+            1,
+            1
+          ],
+          "n_involutions": 4,
+          "min_H2_order": 1,
+          "observed_collapse": true,
+          "P3": true,
+          "sec9_deep": false,
+          "P3_or_deep": true,
+          "P_partition": true
+        },
+        {
+          "orders": [
+            2,
+            4
+          ],
+          "even_exponents": [
+            1,
+            2
+          ],
+          "n_involutions": 6,
+          "min_H2_order": 2,
+          "observed_collapse": false,
+          "P3": false,
+          "sec9_deep": false,
+          "P3_or_deep": false,
+          "P_partition": false
+        },
+        {
+          "orders": [
+            2,
+            8
+          ],
+          "even_exponents": [
+            1,
+            3
+          ],
+          "n_involutions": 12,
+          "min_H2_order": 2,
+          "observed_collapse": false,
+          "P3": false,
+          "sec9_deep": true,
+          "P3_or_deep": true,
+          "P_partition": false
+        },
+        {
+          "orders": [
+            2,
+            16
+          ],
+          "even_exponents": [
+            1,
+            4
+          ],
+          "n_involutions": 16,
+          "min_H2_order": 1,
+          "observed_collapse": true,
+          "P3": false,
+          "sec9_deep": true,
+          "P3_or_deep": true,
+          "P_partition": false
+        },
+        {
+          "orders": [
+            4,
+            4
+          ],
+          "even_exponents": [
+            2,
+            2
+          ],
+          "n_involutions": 28,
+          "min_H2_order": 1,
+          "observed_collapse": true,
+          "P3": true,
+          "sec9_deep": false,
+          "P3_or_deep": true,
+          "P_partition": true
+        },
+        {
+          "orders": [
+            4,
+            8
+          ],
+          "even_exponents": [
+            2,
+            3
+          ],
+          "n_involutions": 48,
+          "min_H2_order": 1,
+          "observed_collapse": true,
+          "P3": false,
+          "sec9_deep": true,
+          "P3_or_deep": true,
+          "P_partition": false
+        },
+        {
+          "orders": [
+            4,
+            16
+          ],
+          "even_exponents": [
+            2,
+            4
+          ],
+          "n_involutions": 64,
+          "min_H2_order": 1,
+          "observed_collapse": true,
+          "P3": false,
+          "sec9_deep": true,
+          "P3_or_deep": true,
+          "P_partition": false
+        },
+        {
+          "orders": [
+            8,
+            8
+          ],
+          "even_exponents": [
+            3,
+            3
+          ],
+          "n_involutions": 176,
+          "min_H2_order": 1,
+          "observed_collapse": true,
+          "P3": true,
+          "sec9_deep": true,
+          "P3_or_deep": true,
+          "P_partition": true
+        },
+        {
+          "orders": [
+            8,
+            16
+          ],
+          "even_exponents": [
+            3,
+            4
+          ],
+          "n_involutions": 224,
+          "min_H2_order": 1,
+          "observed_collapse": true,
+          "P3": false,
+          "sec9_deep": true,
+          "P3_or_deep": true,
+          "P_partition": true
+        },
+        {
+          "orders": [
+            16,
+            16
+          ],
+          "even_exponents": [
+            4,
+            4
+          ],
+          "n_involutions": 608,
+          "min_H2_order": 1,
+          "observed_collapse": true,
+          "P3": true,
+          "sec9_deep": true,
+          "P3_or_deep": true,
+          "P_partition": true
+        },
+        {
+          "orders": [
+            2,
+            2,
+            2
+          ],
+          "even_exponents": [
+            1,
+            1,
+            1
+          ],
+          "n_involutions": 22,
+          "min_H2_order": 2,
+          "observed_collapse": false,
+          "P3": false,
+          "sec9_deep": false,
+          "P3_or_deep": false,
+          "P_partition": false
+        },
+        {
+          "orders": [
+            2,
+            2,
+            4
+          ],
+          "even_exponents": [
+            1,
+            1,
+            2
+          ],
+          "n_involutions": 44,
+          "min_H2_order": 1,
+          "observed_collapse": true,
+          "P3": false,
+          "sec9_deep": false,
+          "P3_or_deep": false,
+          "P_partition": false
+        },
+        {
+          "orders": [
+            2,
+            2,
+            8
+          ],
+          "even_exponents": [
+            1,
+            1,
+            3
+          ],
+          "n_involutions": 88,
+          "min_H2_order": 1,
+          "observed_collapse": true,
+          "P3": false,
+          "sec9_deep": true,
+          "P3_or_deep": true,
+          "P_partition": true
+        },
+        {
+          "orders": [
+            2,
+            2,
+            16
+          ],
+          "even_exponents": [
+            1,
+            1,
+            4
+          ],
+          "n_involutions": 112,
+          "min_H2_order": 1,
+          "observed_collapse": true,
+          "P3": false,
+          "sec9_deep": true,
+          "P3_or_deep": true,
+          "P_partition": true
+        },
+        {
+          "orders": [
+            2,
+            4,
+            4
+          ],
+          "even_exponents": [
+            1,
+            2,
+            2
+          ],
+          "n_involutions": 160,
+          "min_H2_order": 2,
+          "observed_collapse": false,
+          "P3": false,
+          "sec9_deep": false,
+          "P3_or_deep": false,
+          "P_partition": false
+        },
+        {
+          "orders": [
+            2,
+            4,
+            8
+          ],
+          "even_exponents": [
+            1,
+            2,
+            3
+          ],
+          "n_involutions": 352,
+          "min_H2_order": 1,
+          "observed_collapse": true,
+          "P3": false,
+          "sec9_deep": true,
+          "P3_or_deep": true,
+          "P_partition": false
+        },
+        {
+          "orders": [
+            4,
+            4,
+            4
+          ],
+          "even_exponents": [
+            2,
+            2,
+            2
+          ],
+          "n_involutions": 1184,
+          "min_H2_order": 1,
+          "observed_collapse": true,
+          "P3": false,
+          "sec9_deep": false,
+          "P3_or_deep": false,
+          "P_partition": false
+        }
+      ],
+      "total": 21,
+      "skipped": [
+        {
+          "orders": [
+            2,
+            4,
+            16
+          ],
+          "search_space": 2097152,
+          "elem_count": 128
+        },
+        {
+          "orders": [
+            2,
+            8,
+            8
+          ],
+          "search_space": 2097152,
+          "elem_count": 128
+        },
+        {
+          "orders": [
+            2,
+            8,
+            16
+          ],
+          "search_space": 16777216,
+          "elem_count": 256
+        },
+        {
+          "orders": [
+            2,
+            16,
+            16
+          ],
+          "search_space": 134217728,
+          "elem_count": 512
+        },
+        {
+          "orders": [
+            4,
+            4,
+            8
+          ],
+          "search_space": 2097152,
+          "elem_count": 128
+        },
+        {
+          "orders": [
+            4,
+            4,
+            16
+          ],
+          "search_space": 16777216,
+          "elem_count": 256
+        },
+        {
+          "orders": [
+            4,
+            8,
+            8
+          ],
+          "search_space": 16777216,
+          "elem_count": 256
+        },
+        {
+          "orders": [
+            4,
+            8,
+            16
+          ],
+          "search_space": 134217728,
+          "elem_count": 512
+        },
+        {
+          "orders": [
+            4,
+            16,
+            16
+          ],
+          "search_space": 1073741824,
+          "elem_count": 1024
+        },
+        {
+          "orders": [
+            8,
+            8,
+            8
+          ],
+          "search_space": 134217728,
+          "elem_count": 512
+        },
+        {
+          "orders": [
+            8,
+            8,
+            16
+          ],
+          "search_space": 1073741824,
+          "elem_count": 1024
+        },
+        {
+          "orders": [
+            8,
+            16,
+            16
+          ],
+          "search_space": 8589934592,
+          "elem_count": 2048
+        },
+        {
+          "orders": [
+            16,
+            16,
+            16
+          ],
+          "search_space": 68719476736,
+          "elem_count": 4096
+        }
+      ],
+      "P3_agreement": [
+        10,
+        21
+      ],
+      "P3_or_deep_agreement": [
+        18,
+        21
+      ],
+      "P_partition_agreement": [
+        15,
+        21
+      ]
+    }
+  },
+  "thread2": {
+    "full8": {
+      "rows": [
+        {
+          "module": "Z2",
+          "orders": [
+            2
+          ],
+          "dim_M2": 1,
+          "even_exponents": [
+            1
+          ],
+          "min_H2_order": 2,
+          "observed_collapse": false,
+          "P1_even_2rank": false,
+          "P3": false,
+          "sec9_deep": false,
+          "P3_or_deep": false,
+          "P_partition": false,
+          "unified_norm_surj": false
+        },
+        {
+          "module": "Z4",
+          "orders": [
+            4
+          ],
+          "dim_M2": 1,
+          "even_exponents": [
+            2
+          ],
+          "min_H2_order": 2,
+          "observed_collapse": false,
+          "P1_even_2rank": false,
+          "P3": false,
+          "sec9_deep": false,
+          "P3_or_deep": false,
+          "P_partition": false,
+          "unified_norm_surj": false
+        },
+        {
+          "module": "Z8",
+          "orders": [
+            8
+          ],
+          "dim_M2": 1,
+          "even_exponents": [
+            3
+          ],
+          "min_H2_order": 1,
+          "observed_collapse": true,
+          "P1_even_2rank": false,
+          "P3": false,
+          "sec9_deep": true,
+          "P3_or_deep": true,
+          "P_partition": true,
+          "unified_norm_surj": true
+        },
+        {
+          "module": "Z2xZ2",
+          "orders": [
+            2,
+            2
+          ],
+          "dim_M2": 2,
+          "even_exponents": [
+            1,
+            1
+          ],
+          "min_H2_order": 1,
+          "observed_collapse": true,
+          "P1_even_2rank": true,
+          "P3": true,
+          "sec9_deep": false,
+          "P3_or_deep": true,
+          "P_partition": true,
+          "unified_norm_surj": true
+        },
+        {
+          "module": "Z2xZ4",
+          "orders": [
+            2,
+            4
+          ],
+          "dim_M2": 2,
+          "even_exponents": [
+            1,
+            2
+          ],
+          "min_H2_order": 2,
+          "observed_collapse": false,
+          "P1_even_2rank": true,
+          "P3": false,
+          "sec9_deep": false,
+          "P3_or_deep": false,
+          "P_partition": false,
+          "unified_norm_surj": false
+        },
+        {
+          "module": "Z4xZ4",
+          "orders": [
+            4,
+            4
+          ],
+          "dim_M2": 2,
+          "even_exponents": [
+            2,
+            2
+          ],
+          "min_H2_order": 1,
+          "observed_collapse": true,
+          "P1_even_2rank": true,
+          "P3": true,
+          "sec9_deep": false,
+          "P3_or_deep": true,
+          "P_partition": true,
+          "unified_norm_surj": true
+        },
+        {
+          "module": "Z2xZ2xZ2",
+          "orders": [
+            2,
+            2,
+            2
+          ],
+          "dim_M2": 3,
+          "even_exponents": [
+            1,
+            1,
+            1
+          ],
+          "min_H2_order": 2,
+          "observed_collapse": false,
+          "P1_even_2rank": false,
+          "P3": false,
+          "sec9_deep": false,
+          "P3_or_deep": false,
+          "P_partition": false,
+          "unified_norm_surj": false
+        },
+        {
+          "module": "Z3xZ3",
+          "orders": [
+            3,
+            3
+          ],
+          "dim_M2": 0,
+          "even_exponents": [],
+          "min_H2_order": 1,
+          "observed_collapse": true,
+          "P1_even_2rank": true,
+          "P3": true,
+          "sec9_deep": false,
+          "P3_or_deep": true,
+          "P_partition": true,
+          "unified_norm_surj": true
+        }
+      ],
+      "P1_agreement": [
+        6,
+        8
+      ],
+      "P3_agreement": [
+        7,
+        8
+      ],
+      "P3_or_deep_agreement": [
+        8,
+        8
+      ],
+      "P_partition_agreement": [
+        8,
+        8
+      ],
+      "unified_agreement": [
+        8,
+        8
+      ]
+    }
+  },
+  "thread3": {
+    "cyclic": {
+      "expG": 2,
+      "rows": [
+        {
+          "orders": [
+            2
+          ],
+          "max_exp_H2": 2,
+          "divides_expG": true
+        },
+        {
+          "orders": [
+            4
+          ],
+          "max_exp_H2": 2,
+          "divides_expG": true
+        },
+        {
+          "orders": [
+            8
+          ],
+          "max_exp_H2": 2,
+          "divides_expG": true
+        },
+        {
+          "orders": [
+            2,
+            2
+          ],
+          "max_exp_H2": 2,
+          "divides_expG": true
+        },
+        {
+          "orders": [
+            2,
+            4
+          ],
+          "max_exp_H2": 2,
+          "divides_expG": true
+        },
+        {
+          "orders": [
+            2,
+            8
+          ],
+          "max_exp_H2": 2,
+          "divides_expG": true
+        },
+        {
+          "orders": [
+            4,
+            4
+          ],
+          "max_exp_H2": 2,
+          "divides_expG": true
+        },
+        {
+          "orders": [
+            4,
+            8
+          ],
+          "max_exp_H2": 2,
+          "divides_expG": true
+        },
+        {
+          "orders": [
+            8,
+            8
+          ],
+          "max_exp_H2": 2,
+          "divides_expG": true
+        },
+        {
+          "orders": [
+            2,
+            3
+          ],
+          "max_exp_H2": 2,
+          "divides_expG": true
+        },
+        {
+          "orders": [
+            4,
+            3
+          ],
+          "max_exp_H2": 2,
+          "divides_expG": true
+        },
+        {
+          "orders": [
+            2,
+            6
+          ],
+          "max_exp_H2": 2,
+          "divides_expG": true
+        },
+        {
+          "orders": [
+            6,
+            6
+          ],
+          "max_exp_H2": 2,
+          "divides_expG": true
+        },
+        {
+          "orders": [
+            3,
+            3
+          ],
+          "max_exp_H2": 1,
+          "divides_expG": true
+        },
+        {
+          "orders": [
+            2,
+            2,
+            3
+          ],
+          "max_exp_H2": 2,
+          "divides_expG": true
+        }
+      ],
+      "worst_exp_H2": 2,
+      "all_divide_expG": true,
+      "violations": []
+    },
+    "engine_crosscheck": {
+      "checked": 28,
+      "violations": [],
+      "by_group": {
+        "Z2xZ2xZ2": {
+          "expG": 2,
+          "spectra_checked": 4,
+          "violations": []
+        },
+        "Z4xZ2": {
+          "expG": 4,
+          "spectra_checked": 24,
+          "violations": []
+        }
+      },
+      "all_divide_expG": true
+    }
+  },
+  "ledger": [
+    {
+      "claim": "THREAD 1 SUFFICIENCY (hyperbolic swap collapses Z_{2^a}^2, a=1,2,3)",
+      "status": "PROVEN-CONSTRUCTIVE",
+      "note": "swap involution realizes (1+u)M=M^u exactly for a=1,2,3"
+    },
+    {
+      "claim": "THREAD 1 NECESSITY (single Z_{2^a}: a<=2 never collapses; a=3 does via deep)",
+      "status": "PROVEN-EXHAUSTIVE",
+      "note": "a=1,2 keep a floor under EVERY involution; a=3 collapses (deep channel)"
+    },
+    {
+      "claim": "THREAD 1 EXHAUSTIVE 2-GROUP SWEEP: P3 vs observed collapse",
+      "status": "VERIFIED-ON-FAMILY 10/21",
+      "note": "P3 alone; misses exactly the deep single-factor cases"
+    },
+    {
+      "claim": "THREAD 1+2 loose P3-or-deep on sweep (REFUTED as exact)",
+      "status": "REFUTED 18/21",
+      "note": "too loose: Z2xZ8 has a deep 3 but keeps a shallow-1 floor"
+    },
+    {
+      "claim": "THREAD 2 CORRECTED unified invariant P_partition on sweep",
+      "status": "MISS 15/21",
+      "note": "collapse <=> exponent-multiset consumes to empty by equal-pairs and deep(>=3)-singletons; leftover shallow singleton = floor"
+    },
+    {
+      "claim": "THREAD 2 on the original 8 modules: P_partition invariant",
+      "status": "VERIFIED-ON-FAMILY 8/8",
+      "note": "P1=6/8(REFUTED), P3=7/8, P_partition=8/8, tautological norm-surj=8/8"
+    },
+    {
+      "claim": "THREAD 3 exp(H^2(Z2,M)) | 2 for ALL modules & involutions",
+      "status": "PROVEN-EXHAUSTIVE",
+      "note": "worst exponent seen = 2 (must be <=2)"
+    },
+    {
+      "claim": "THREAD 3 exp(H^2) | exp(G) on the section-14 engine spectra (exp G up to 4)",
+      "status": "VERIFIED-ON-FAMILY",
+      "note": "28 spectra checked; Z4 summand appears only for exp(G)=4 groups"
+    }
+  ]
+}

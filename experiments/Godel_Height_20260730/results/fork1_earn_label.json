@@ -1,0 +1,134 @@
+{
+  "rows": [
+    [
+      "liar_two_valued",
+      2.00265,
+      false
+    ],
+    [
+      "goodhart_measurement",
+      1.9971099999999997,
+      false
+    ],
+    [
+      "order_effect",
+      2.0022599999999997,
+      false
+    ],
+    [
+      "nested_reflexivity",
+      1.9980099999999998,
+      false
+    ],
+    [
+      "deep_frame_paradox",
+      1.99751,
+      false
+    ],
+    [
+      "self_amendment_diagonal",
+      2.8256900000000003,
+      true
+    ],
+    [
+      "signalling_mimic",
+      1.99538,
+      false
+    ],
+    [
+      "noisy_generative_10pct",
+      1.8072,
+      true
+    ],
+    [
+      "noisy_generative_25pct",
+      0.70423,
+      true
+    ],
+    [
+      "confounded_local",
+      2.0,
+      false
+    ]
+  ],
+  "confusion": {
+    "TP": 1,
+    "FP": 0,
+    "TN": 7,
+    "FN": 2
+  },
+  "detail": [
+    [
+      "liar_two_valued",
+      2.00265,
+      false,
+      false,
+      "TN"
+    ],
+    [
+      "goodhart_measurement",
+      1.9971099999999997,
+      false,
+      false,
+      "TN"
+    ],
+    [
+      "order_effect",
+      2.0022599999999997,
+      false,
+      false,
+      "TN"
+    ],
+    [
+      "nested_reflexivity",
+      1.9980099999999998,
+      false,
+      false,
+      "TN"
+    ],
+    [
+      "deep_frame_paradox",
+      1.99751,
+      false,
+      false,
+      "TN"
+    ],
+    [
+      "self_amendment_diagonal",
+      2.8256900000000003,
+      true,
+      true,
+      "TP"
+    ],
+    [
+      "signalling_mimic",
+      1.99538,
+      false,
+      false,
+      "TN"
+    ],
+    [
+      "noisy_generative_10pct",
+      1.8072,
+      true,
+      false,
+      "FN (missed!)"
+    ],
+    [
+      "noisy_generative_25pct",
+      0.70423,
+      true,
+      false,
+      "FN (missed!)"
+    ],
+    [
+      "confounded_local",
+      2.0,
+      false,
+      false,
+      "TN"
+    ]
+  ],
+  "critical_noise_empirical": 0.0799,
+  "critical_noise_theory_two_sided_flip": 0.07955179237314275
+}

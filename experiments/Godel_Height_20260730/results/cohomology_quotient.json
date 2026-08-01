@@ -1,0 +1,305 @@
+{
+  "configs": [
+    {
+      "m": 2,
+      "N": 4,
+      "u": 1,
+      "sizes": {
+        "|C1|": 16,
+        "|Z2|": 16,
+        "|B2|": 8,
+        "|H2|": 2,
+        "|ker phi|": 2,
+        "|im phi|": 8
+      },
+      "H2_order": 2,
+      "H2_element_orders": [
+        1,
+        2
+      ],
+      "H2_max_element_order": 2,
+      "H2_is_cyclic": true,
+      "axioms": {
+        "closure": true,
+        "identity_in_group": true,
+        "identity_law": true,
+        "inverse": true,
+        "associative": true,
+        "commutative": true
+      },
+      "all_axioms_pass": true,
+      "gauge_is_homomorphism": true,
+      "gauge_hom_detail": {
+        "phi(f+g)=phi f+phi g": true,
+        "phi(0)=0": true,
+        "phi(-f)=-phi f": true
+      },
+      "first_iso_|C1|=|ker||im|": true,
+      "quotient_|Z2|=|H2||B2|": true,
+      "H2_elements": [
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ],
+      "H2_addition_table": {
+        "[0, 0, 0, 0]+[0, 0, 0, 0]": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "[0, 0, 0, 0]+[0, 0, 0, 1]": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "[0, 0, 0, 1]+[0, 0, 0, 0]": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "[0, 0, 0, 1]+[0, 0, 0, 1]": [
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "m": 2,
+      "N": 4,
+      "u": 3,
+      "sizes": {
+        "|C1|": 16,
+        "|Z2|": 8,
+        "|B2|": 4,
+        "|H2|": 2,
+        "|ker phi|": 4,
+        "|im phi|": 4
+      },
+      "H2_order": 2,
+      "H2_element_orders": [
+        1,
+        2
+      ],
+      "H2_max_element_order": 2,
+      "H2_is_cyclic": true,
+      "axioms": {
+        "closure": true,
+        "identity_in_group": true,
+        "identity_law": true,
+        "inverse": true,
+        "associative": true,
+        "commutative": true
+      },
+      "all_axioms_pass": true,
+      "gauge_is_homomorphism": true,
+      "gauge_hom_detail": {
+        "phi(f+g)=phi f+phi g": true,
+        "phi(0)=0": true,
+        "phi(-f)=-phi f": true
+      },
+      "first_iso_|C1|=|ker||im|": true,
+      "quotient_|Z2|=|H2||B2|": true,
+      "H2_elements": [
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          2
+        ]
+      ],
+      "H2_addition_table": {
+        "[0, 0, 0, 0]+[0, 0, 0, 0]": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "[0, 0, 0, 0]+[0, 0, 0, 2]": [
+          0,
+          0,
+          0,
+          2
+        ],
+        "[0, 0, 0, 2]+[0, 0, 0, 0]": [
+          0,
+          0,
+          0,
+          2
+        ],
+        "[0, 0, 0, 2]+[0, 0, 0, 2]": [
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "m": 2,
+      "N": 8,
+      "u": 1,
+      "sizes": {
+        "|C1|": 64,
+        "|Z2|": 64,
+        "|B2|": 32,
+        "|H2|": 2,
+        "|ker phi|": 2,
+        "|im phi|": 32
+      },
+      "H2_order": 2,
+      "H2_element_orders": [
+        1,
+        2
+      ],
+      "H2_max_element_order": 2,
+      "H2_is_cyclic": true,
+      "axioms": {
+        "closure": true,
+        "identity_in_group": true,
+        "identity_law": true,
+        "inverse": true,
+        "associative": true,
+        "commutative": true
+      },
+      "all_axioms_pass": true,
+      "gauge_is_homomorphism": true,
+      "gauge_hom_detail": {
+        "phi(f+g)=phi f+phi g": true,
+        "phi(0)=0": true,
+        "phi(-f)=-phi f": true
+      },
+      "first_iso_|C1|=|ker||im|": true,
+      "quotient_|Z2|=|H2||B2|": true
+    },
+    {
+      "m": 2,
+      "N": 8,
+      "u": 3,
+      "sizes": {
+        "|C1|": 64,
+        "|Z2|": 16,
+        "|B2|": 16,
+        "|H2|": 1,
+        "|ker phi|": 4,
+        "|im phi|": 16
+      },
+      "H2_order": 1,
+      "H2_element_orders": [
+        1
+      ],
+      "H2_max_element_order": 1,
+      "H2_is_cyclic": true,
+      "axioms": {
+        "closure": true,
+        "identity_in_group": true,
+        "identity_law": true,
+        "inverse": true,
+        "associative": true,
+        "commutative": true
+      },
+      "all_axioms_pass": true,
+      "gauge_is_homomorphism": true,
+      "gauge_hom_detail": {
+        "phi(f+g)=phi f+phi g": true,
+        "phi(0)=0": true,
+        "phi(-f)=-phi f": true
+      },
+      "first_iso_|C1|=|ker||im|": true,
+      "quotient_|Z2|=|H2||B2|": true
+    },
+    {
+      "m": 2,
+      "N": 3,
+      "u": 1,
+      "sizes": {
+        "|C1|": 9,
+        "|Z2|": 9,
+        "|B2|": 9,
+        "|H2|": 1,
+        "|ker phi|": 1,
+        "|im phi|": 9
+      },
+      "H2_order": 1,
+      "H2_element_orders": [
+        1
+      ],
+      "H2_max_element_order": 1,
+      "H2_is_cyclic": true,
+      "axioms": {
+        "closure": true,
+        "identity_in_group": true,
+        "identity_law": true,
+        "inverse": true,
+        "associative": true,
+        "commutative": true
+      },
+      "all_axioms_pass": true,
+      "gauge_is_homomorphism": true,
+      "gauge_hom_detail": {
+        "phi(f+g)=phi f+phi g": true,
+        "phi(0)=0": true,
+        "phi(-f)=-phi f": true
+      },
+      "first_iso_|C1|=|ker||im|": true,
+      "quotient_|Z2|=|H2||B2|": true
+    },
+    {
+      "m": 2,
+      "N": 2,
+      "u": 1,
+      "sizes": {
+        "|C1|": 4,
+        "|Z2|": 4,
+        "|B2|": 2,
+        "|H2|": 2,
+        "|ker phi|": 2,
+        "|im phi|": 2
+      },
+      "H2_order": 2,
+      "H2_element_orders": [
+        1,
+        2
+      ],
+      "H2_max_element_order": 2,
+      "H2_is_cyclic": true,
+      "axioms": {
+        "closure": true,
+        "identity_in_group": true,
+        "identity_law": true,
+        "inverse": true,
+        "associative": true,
+        "commutative": true
+      },
+      "all_axioms_pass": true,
+      "gauge_is_homomorphism": true,
+      "gauge_hom_detail": {
+        "phi(f+g)=phi f+phi g": true,
+        "phi(0)=0": true,
+        "phi(-f)=-phi f": true
+      },
+      "first_iso_|C1|=|ker||im|": true,
+      "quotient_|Z2|=|H2||B2|": true
+    }
+  ],
+  "all_pass": true
+}
