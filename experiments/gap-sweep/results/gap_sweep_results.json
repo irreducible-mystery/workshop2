@@ -1,0 +1,162 @@
+{
+  "A_real_sweep": {
+    "branch_point": -0.25,
+    "root_at_branch": 0.5,
+    "unit_circle_gap": -1.0,
+    "roots_at_G_minus1": [
+      "(0.5+0.8660254037844386j)",
+      "(0.5-0.8660254037844386j)"
+    ],
+    "they_are_sixth_roots_of_unity": true,
+    "note": "classical window G>-1/4 (two real roots); quantum window G<-1/4 (conjugate phase pair, common modulus sqrt(-G)); |root|=1 exactly at G=-1."
+  },
+  "B_monodromy": {
+    "one_loop_swaps_roots": true,
+    "two_loops_restore": true,
+    "group": "Z2",
+    "note": "The direction of approach to -1/4 is not decoration: the branch point carries a Z2 monodromy. Circle round it once, the two roots trade places. Same Z2 that survived the Galois twist in circle-six H^3. The invariant holds; the LABELS braid."
+  },
+  "C_mandelbrot_bridge": {
+    "map": "z -> z^2 + c with c = -G",
+    "fixed_point_multiplier_at_branch": 1.0,
+    "branch_is_cardioid_cusp": true,
+    "golden_G_is_period2_superstable_centre": true,
+    "unit_circle_G_escapes": true,
+    "note": "classical stability (attracting fixed pt) = interior of main cardioid; the branch point is PARABOLIC dynamics (multiplier exactly 1). The most quantum gap (G=-1, roots on unit circle) lies OUTSIDE the set: pure phase never settles. Classical=inside, quantum=escape, the cusp is the door."
+  },
+  "D_recursion": {
+    "defective_at": -0.25,
+    "measured_n_halfpow_coeff_at_n40": 1.025,
+    "coeff_at_n50_matches": false,
+    "note": "The nilpotent solution Golden.lean proves unique to -1/4 is not exotic: in the time domain it is the secular term n\u00b7(1/2)^n \u2014 the sound of two modes becoming one. Criticality IS the dual number."
+  },
+  "E_gap_set": {
+    "+1": {
+      "roots": [
+        "1.618034+0.000000j",
+        "-0.618034+0.000000j"
+      ],
+      "sum_is_1": true,
+      "product_is_minus_G": true,
+      "|x+|": 1.618034,
+      "|x-|": 0.618034,
+      "gap_between_roots": "2.236068+0.000000j",
+      "gap_squared": "5.000000+0.000000j"
+    },
+    "-1": {
+      "roots": [
+        "0.500000+0.866025j",
+        "0.500000-0.866025j"
+      ],
+      "sum_is_1": true,
+      "product_is_minus_G": true,
+      "|x+|": 1.0,
+      "|x-|": 1.0,
+      "gap_between_roots": "0.000000+1.732051j",
+      "gap_squared": "-3.000000+0.000000j"
+    },
+    "+i": {
+      "roots": [
+        "1.300243+0.624811j",
+        "-0.300243-0.624811j"
+      ],
+      "sum_is_1": true,
+      "product_is_minus_G": true,
+      "|x+|": 1.442574,
+      "|x-|": 0.693205,
+      "gap_between_roots": "1.600485+1.249621j",
+      "gap_squared": "1.000000+4.000000j"
+    },
+    "-i": {
+      "roots": [
+        "1.300243-0.624811j",
+        "-0.300243+0.624811j"
+      ],
+      "sum_is_1": true,
+      "product_is_minus_G": true,
+      "|x+|": 1.442574,
+      "|x-|": 0.693205,
+      "gap_between_roots": "1.600485-1.249621j",
+      "gap_squared": "1.000000-4.000000j"
+    }
+  },
+  "E_gap_set_law": "(x+ - x-)^2 = 1 + 4G for every G: THE GAP BETWEEN THE ROOTS SATISFIES ITS OWN EQUATION, one level up. gamma^2 = 1 + 4G  \u2014 the gap of the gap is affine in the gap.",
+  "F1_finite_fields": {
+    "golden_exists_mod_p_iff": "5 is a QR mod p  <=>  p = +-1 mod 5",
+    "lives_in": [
+      5,
+      11,
+      19,
+      29,
+      31,
+      41,
+      59,
+      61,
+      71,
+      79,
+      89,
+      101,
+      109,
+      131
+    ],
+    "residues_mod5_of_lives": [
+      1,
+      4
+    ],
+    "dies_in": [
+      3,
+      7,
+      13,
+      17,
+      23,
+      37,
+      43,
+      47,
+      53,
+      67,
+      73,
+      83,
+      97,
+      103
+    ],
+    "p5_special": "x^2=x+1 has the DOUBLE root 3 mod 5 \u2014 the finite-field shadow of the branch point: 1+4G = 5 = 0 mod 5. In F_5 the golden gap IS the collision. -1/4 mod 5 = 1. The branch point and the golden gap are THE SAME RESIDUE in F_5.",
+    "check_minus_quarter_mod5": 1
+  },
+  "F2_char2": {
+    "x2_eq_x_plus_1_roots_in_F4": [
+      "w",
+      "w+1"
+    ],
+    "w_squared_equals_w_plus_1": true,
+    "roots_are_cube_roots_of_unity": true,
+    "gap_set_collapse": "in F_2:  +1 = -1  and  i = 1  (since x^2=-1 => x=1). All four gaps {+1,-1,+i,-i} become ONE gap. The golden ratio in characteristic 2 IS the cube root of unity. phi*psi=-1 and phi*psi=+1 stop being different claims.",
+    "artin_schreier": "completing the square needs 1/2; char 2 replaces x^2-x=G (Artin-Schreier) \u2014 already in circle-six GAP/lean/ArtinSchreier.lean."
+  },
+  "F3_padic": {
+    "Q11_has_phi": true,
+    "Q7_has_phi": false,
+    "Q5": "v_5(sqrt5)=1/2 not an integer: phi needs the RAMIFIED extension Q_5(sqrt5). The golden ratio sits exactly on a ramification point of the 5-adic world \u2014 the same prime that indexes it in R (sqrt5), again refusing to be ordinary."
+  },
+  "F4_quaternions": {
+    "G": -1.0,
+    "random_unit_sphere_directions_tested": 500,
+    "all_solve": true,
+    "solution_set": "a 2-SPHERE: x = 1/2 + (sqrt(-(1+4G))/2)\u00b7u for EVERY imaginary unit u",
+    "note": "Same equation, bigger algebra: the two quantum roots inflate into a continuum. C chooses an axis (\u00b1i); H refuses to choose. The \"two roots\" were never two THINGS \u2014 they were two labels on one sphere, visible only after an axis is picked. Relational lens vindicated by dimension count: classical 0-sphere (2 pts) -> complex 0-sphere embedded with phase -> quaternionic 2-sphere."
+  },
+  "G_tower": {
+    "iterate_x_plus_from_G=1_converges_to": 2.0,
+    "fixed_point": 2.0,
+    "attracting_derivative": 0.3333333333333333,
+    "meaning_of_2": "x^2=x+2 has roots {2,-1}: the first INTEGER pair past golden. The tower of gaps eats itself and lands on the simplest split: 2 and -1. Self-reference terminates in integers.",
+    "gap_is_golden_at_G": 0.4045084971874737,
+    "gap_between_roots_there": 1.618033988749895,
+    "equals_phi": true
+  },
+  "I_sound": {
+    "file": "gap_sweep.wav",
+    "script": "G sweeps 1 -> -1 over 12s. Start: the golden chord (pitch ratio phi^2 = phi+1, the only interval equal to itself plus an octave-of-itself). At G=-1/4 (t=7.5s) the two voices FUSE into unison at 110 Hz \u2014 you can hear the branch point as the death of harmony into a single line. For G<-1/4 both moduli are sqrt(-G): ONE pitch rising, and the difference between the roots survives only as stereo phase \u2014 audible as space, not as tone. Classical = interval. Quantum = placement."
+  },
+  "ONE_SENTENCE": "The gap is not the flaw in the equation; it is the coordinate the whole family of solutions breathes through, and \u201ckinds of number\u201d \u2014 real, imaginary, nilpotent, finite, spherical \u2014 are just the shapes the same two roots take when you walk up to \u22121/4 from different directions.",
+  "ONE_WORD": "between"
+}
