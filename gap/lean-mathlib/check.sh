@@ -34,7 +34,7 @@ extract() {
         sub(/^@\[[^]]*\][[:space:]]*/,"",line)
         while (line ~ /^(private|protected|noncomputable|partial|unsafe)[[:space:]]+/)
           sub(/^(private|protected|noncomputable|partial|unsafe)[[:space:]]+/,"",line)
-        if (line ~ /^(theorem|lemma|def|abbrev|instance|structure|example)[[:space:]]+[A-Za-z_]/) {
+        if (line ~ /^(theorem|lemma|def|abbrev|instance|structure|example|axiom)[[:space:]]+[A-Za-z_]/) {
           n=line; sub(/^[a-z]+[[:space:]]+/,"",n); sub(/[^A-Za-z_0-9.'"'"'].*/,"",n)
           if (n=="") next
           p=""; for (i=1;i<=d;i++) p = p ns[i] "."
@@ -79,9 +79,27 @@ for f in *.lean; do
         fail=1; continue
     fi
     tot=$((tot+n)); aud=$((aud+a))
-    bad=$(printf '%s' "$out" | grep -c "sorryAx\|ofReduceBool\|ofReduceNat")
-    printf '  %-24s %3s declarations, %3s audited, sorryAx/native: %s\n' "$f" "$n" "$a" "$bad"
-    [ "$bad" -eq 0 ] || fail=1
+    # ALLOWLIST, not denylist. Only these three are permitted; ANY other axiom
+    # fails, including ones nobody thought to name.
+    #
+    # 2026-08-02: this was a denylist -- grep -c for sorryAx|ofReduceBool. A file
+    # containing `axiom cheat : (0:Nat) = 1` and a theorem `2+2=5` proved from it
+    # passed with "2 declarations, 2 audited, sorryAx/native: 0" and EXIT 0,
+    # while lean itself was printing `depends on axioms: [propext, Attack.cheat,
+    # Quot.sound]` in the very output being grepped. A denylist cannot enumerate
+    # what an author may invent. `axiom` was also missing from the extractor.
+    extra=$(printf '%s\n' "$out" \
+            | sed -n 's/.*depends on axioms: \[\(.*\)\]/\1/p' \
+            | tr ',' '\n' | sed 's/^[[:space:]]*//; s/[[:space:]]*$//' \
+            | grep -v '^$' | sort -u \
+            | grep -vxE 'propext|Classical\.choice|Quot\.sound')
+    if [ -n "$extra" ]; then
+        printf '  %-24s %3s declarations, %3s audited  FORBIDDEN AXIOMS:\n' "$f" "$n" "$a"
+        printf '%s\n' "$extra" | sed 's/^/      /'
+        fail=1
+    else
+        printf '  %-24s %3s declarations, %3s audited, axioms within allowlist\n' "$f" "$n" "$a"
+    fi
 done
 echo
 echo "  TOTAL: $tot declarations, $aud audited"
